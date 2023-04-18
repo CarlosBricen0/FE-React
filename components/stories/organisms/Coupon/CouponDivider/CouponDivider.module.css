@@ -1,0 +1,13 @@
+.couponDivider--vertical {
+  border-left: 2px dashed var(--color-neutral-gray);
+  width: 0;
+}
+
+.couponDivider--horizontal {
+  border-top: 1px dashed var(--color-neutral-gray);
+  width: calc(100% - 40px) !important; 
+}
+
+.couponDivider__child--horizontal {
+  margin-top: -20px;
+}

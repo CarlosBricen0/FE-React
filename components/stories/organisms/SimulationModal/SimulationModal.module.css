@@ -1,0 +1,7 @@
+.outOfStock {
+  mix-blend-mode: luminosity;
+}
+
+.spacerShadow {
+  box-shadow: 0px -2px 2px 0px rgba(198, 198, 198, 0.3);
+}

@@ -1,0 +1,79 @@
+.cartIcon:hover {
+  animation-direction: alternate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: cartIcon;
+}
+
+@keyframes cartIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-15deg);
+  }
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.loading svg {
+  animation: loading-spinner 1s linear infinite;
+  margin-bottom: 2px;
+}
+
+.loading-alvi {
+  display: flex;
+  margin: auto;
+  place-content: center;
+  position: absolute;
+  right: 0px;
+  top: 1.4px;
+  width: 100%;
+}
+
+.loading-alvi svg {
+  animation: loading-spinner 1s linear infinite;
+  margin-bottom: 2px;
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.containerQuantityAlvi {
+  display: flex;
+  left: 14px;
+  place-content: center;
+  top: -4px;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .containerQuantityAlvi {
+    left: 18px;
+    top: 2px;
+  }
+
+  .loading-alvi {
+    top: 1.4px;
+  }
+
+  .loading-alvi svg {
+    height: 15px;
+    width: 15px;
+  }
+}

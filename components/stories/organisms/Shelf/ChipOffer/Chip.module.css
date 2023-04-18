@@ -1,0 +1,23 @@
+.offerDesktop::after {
+    border-left: 16px solid transparent;
+    border-radius: 5px 4px 5px 98%;
+    border-top: 16px solid var(--color-neutral-gray-light);
+    content: '';
+    height: 0;
+    left: 17px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 0;
+    z-index: -1;
+}
+
+.offerMobile::after {
+    border-left: 11px solid transparent;
+    border-radius: 4px 4px 6px 99%;
+    border-top: 11px solid #F5F5F5;
+    content: '';
+    left: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: -1;
+}

@@ -1,0 +1,39 @@
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 0;
+  outline: 0;
+  border-radius: var(--border-radius-full);
+  border: 0;
+  background: #ffffff;
+  min-width: 30px;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+.opacity {
+  transition: all 0.5;
+  opacity: 0;
+}
+
+.rightArrow {
+  filter: drop-shadow(20px 20px 80px #1b2138e6);
+  margin-left: -19px;
+  margin-top: -50px;
+}
+
+.arrow svg {
+  transition: all 0.3s;
+}
+
+.arrow:hover svg {
+  opacity: 0.6;
+}
+
+.leftArrow {
+  filter: drop-shadow(20px 20px 80px #1b2138e6);
+  margin-left: -11px;
+  margin-top: -50px;
+}

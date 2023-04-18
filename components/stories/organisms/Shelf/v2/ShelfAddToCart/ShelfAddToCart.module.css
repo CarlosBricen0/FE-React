@@ -1,0 +1,30 @@
+.addToCart {
+  border-radius: 24px !important;
+  transition: all .15s ease-in;
+}
+.hover:not(.disabled) {
+  width: 130px !important;
+}
+.addToCart__plus {
+  opacity: 0;
+  transition: all .2s;
+  z-index: 2;
+}
+.addToCart__quantity {
+  opacity: 0;
+  overflow: hidden;
+  transition: all .1s;
+  z-index: 2;
+  white-space: nowrap;
+}
+.quantity-container p {
+  justify-content: center;
+  width: 100%;
+}
+.show{
+  opacity: 1;
+  z-index: 3;
+}
+.no-select {
+  user-select: none !important;
+}

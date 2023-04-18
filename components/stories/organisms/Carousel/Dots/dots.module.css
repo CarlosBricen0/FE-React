@@ -1,0 +1,17 @@
+.dots {
+  background-color: var(--color-neutral-gray);
+  border-radius: var(--border-radius-lg);
+  border: none;
+  cursor: pointer;
+  height: 8px;
+  margin-right: 8px;
+  padding: 0;
+  width: 8px;
+}
+
+.dots--active {
+  background-color: var(--color-text-gray-light);
+  border-radius: var(--border-radius-lg);
+  height: 8px;
+  width: 30px;
+}

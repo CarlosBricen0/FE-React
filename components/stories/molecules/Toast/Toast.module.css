@@ -1,0 +1,11 @@
+.toast {
+  transition: all .2s;
+}
+
+.toast--top.toast--hidden {
+  transform: translateY(-100%);
+}
+
+.toast--bottom.toast--hidden {
+  transform: translateY(100%);
+}

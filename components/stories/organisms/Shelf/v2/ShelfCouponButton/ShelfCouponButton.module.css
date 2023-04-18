@@ -1,0 +1,76 @@
+.buttonContainer{
+  border: var(--border-width-xs) dashed;
+  border-color: var(--color-secondary-blue);
+  border-radius: var(--border-radius-xl);
+  position: relative;
+}
+
+.shelfCouponButton {
+  color: var(--color-secondary-blue);
+  font-size: var(--font-size-md);
+  text-align: center;
+  height: 35px;
+}
+
+.loading {
+  background-color: var(--color-background-blue-light) !important;
+}
+
+.new {
+  color: var(--color-secondary-blue);
+  background-color: var(--color-background-secondary-light);
+}
+
+.new:hover {
+  background-color: var(--color-background-blue-light);
+}
+
+.newBorder{
+  border-color: var(--color-secondary-blue);
+}
+
+.activated {
+  color: var(--color-primary-green-light) !important;
+  background-color: var(--color-background-gray-info);
+  cursor: default;
+}
+
+.activatedBorder{
+  border-color: var(--color-primary-green-light);
+}
+
+.used {
+  color: var(--color-icons-gray-light) !important;
+  background-color: var(--color-background-gray-light);
+  cursor: default;
+}
+
+.usedBorder{
+  border-color: var(--color-icons-gray-light);
+}
+
+.loadingBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #E8FCF8;
+  /* background-color: #00ffcc; */
+}
+
+.inProgress{
+  width: 75%;
+  transition: width 10s;
+}
+
+.completed{
+  width: 100%;
+  transition: width 0.2s;
+  animation: complete 0.2s 0.2s forwards;
+}
+
+@keyframes complete{
+  0%   {opacity: 1}
+  100% {opacity: 0}
+}

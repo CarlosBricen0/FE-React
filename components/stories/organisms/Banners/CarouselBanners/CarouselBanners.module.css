@@ -1,0 +1,33 @@
+.carousel picture,
+.carouselMobile picture {
+  width: 100%;
+}
+
+.carousel,
+.carouselMobile {
+  display: flex;
+}
+
+.carouselMobile--without-padding {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.carouselMobile {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 0 0 28px;
+}
+
+.carouselMobile::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  transition: all ease .25s;
+  padding: 8px 0;
+}
+
+.carousel-item--zoom-in:hover {
+  transform: scale(1.05);
+}

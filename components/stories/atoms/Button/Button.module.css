@@ -1,0 +1,273 @@
+.button {
+  border: var(--border-radius-none);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0px;
+  line-height: var(--line-height-lg);
+  text-align: center;
+  cursor: pointer;
+}
+
+.button__primary,
+.button.button__primary.button--disabled-red {
+  background: var(--color-primary-red-header);
+  color: var(--color-base-white);
+}
+
+.button__primary:hover {
+  background: var(--color-primary-red-dark);
+}
+
+.button__primary-out-hover,
+.button.button__primary-out-hover.button--disabled-red {
+  background: var(--color-primary-red-header);
+  color: var(--color-base-white);
+}
+
+.button.button__primary-out-hover.button--disabled {
+  background: var(--color-primary-disabled);
+  color: var(--color-base-white);
+}
+
+.button.button__primary.button--disabled {
+  background: var(--color-primary-disabled);
+  color: var(--color-base-white);
+  cursor: default;
+}
+
+.button__secondary {
+  background-color: var(--color-base-white);
+  border: var(--border-width-xs) solid var(--color-primary-red2);
+  box-sizing: border-box;
+  color: var(--color-primary-red2);
+}
+
+.button__secondary:hover {
+  background: var(--color-primary-red-header);
+  color: var(--color-neutral-white);
+}
+
+.button.button__secondary.button--disabled {
+  background: var(--color-base-white);
+  border: var(--border-width-xs) solid var(--color-primary-disabled);
+  color: var(--color-primary-disabled);
+  cursor: default;
+}
+
+.button__primary-ca {
+  background-color: var(--color-secondary-blue);
+  color: var(--color-base-white);
+}
+
+.button__primary-ca:hover {
+  background-color: var(--color-secondary-blue-dark);
+}
+
+.button__primary-ca.button--disabled {
+  background: var(--color-primary-disabled);
+  color: var(--color-text-gray-light);
+}
+
+.button__primary-green {
+  background: var(--color-primary-green-light);
+  color: var(--color-base-white);
+}
+
+.button__primary-green:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    var(--color-primary-green-light);
+  filter: drop-shadow(0px 6px 10px rgba(27, 33, 56, 0.15));
+}
+.button__primary-green.button--loading svg,
+.button__secondary-green.button--loading svg {
+  fill: white;
+}
+
+.button__primary-green.button--disabled {
+  background: var(--color-primary-disabled);
+  border: 1px solid var(--color-text-inactive);
+  color: var(--color-base-white);
+}
+
+.button__secondary-green {
+  background: var(--color-neutral-white);
+  border: 1.6px solid var(--color-primary-green-light);
+  color: var(--color-primary-green-light);
+}
+
+.button__secondary-green:hover {
+  background: var(--color-background-gray-info);
+  filter: drop-shadow(0px 6px 10px rgba(27, 33, 56, 0.15));
+}
+
+.button__secondary-ca {
+  background-color: var(--color-base-white);
+  border: var(--border-width-xs) solid var(--color-secondary-blue);
+  box-sizing: border-box;
+  color: var(--color-secondary-blue);
+}
+
+.button__secondary-ca:hover {
+  border: var(--border-width-xs) solid var(--color-secondary-blue-dark);
+  color: var(--color-secondary-blue-dark);
+}
+
+.button__secondary-ca.button--disabled {
+  border: var(--border-width-xs) solid var(--color-primary-disabled);
+  color: var(--color-primary-disabled);
+}
+
+.button--xl {
+  border-radius: var(--border-radius-xs);
+  font-size: var(--font-size-xl);
+  height: 45px;
+  left: 0px;
+  top: 0px;
+}
+
+.button--large,
+.button--lg {
+  border-radius: var(--border-radius-xs);
+  height: 45px;
+  left: 0px;
+  top: 0px;
+}
+
+.button--medium {
+  border-radius: var(--border-radius-xs);
+  height: 40px;
+  left: 0px;
+  top: 0px;
+}
+
+.button--small,
+.button--sm {
+  border-radius: var(--border-radius-xs);
+  height: 35px;
+  left: 0px;
+  top: 0px;
+}
+
+.button--xs {
+  border-radius: var(--border-radius-xs);
+  font-size: var(--font-size-md);
+  height: 30px;
+  left: 0px;
+  top: 0px;
+}
+
+.button--md {
+  font-size: var(--font-size-md);
+  height: 45px;
+  left: 0px;
+  top: 0px;
+}
+
+.button--small svg,
+.button--sm svg {
+  margin-top: 0.125rem;
+}
+
+.button--loading svg {
+  animation: loading-spinner 1s linear infinite;
+  margin-top: 0.188rem;
+}
+
+.button--fullwidth {
+  width: 100% !important;
+}
+
+.button__sub-category {
+  background-color: var(--color-base-white);
+  border-radius: var(--border-radius-full);
+  border: var(--border-width-xs) solid var(--color-neutral-gray-dark);
+  color: var(--color-text-black);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.button__plain {
+  background: transparent;
+  border: none;
+  font-weight: var(--font-weight-normal);
+  padding: 0;
+  text-align: left;
+}
+
+.button__semibold {
+  background: transparent;
+  border: none;
+  font-weight: var(--font-weight-semibold);
+  padding: 0;
+  text-align: left;
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button__alvi__primary {
+  background: var(--color-alvi-primary-blue-gradient);
+}
+
+.button__alvi__primary:hover {
+  background: var(--color-alvi-primary-blue3);
+}
+
+/* underline */
+.button--none {
+  text-decoration: none;
+}
+
+.button--hover:hover {
+  text-decoration: underline;
+}
+
+.button--always {
+  text-decoration: underline;
+}
+
+.button--line-through {
+  text-decoration: line-through;
+}
+
+.button__alvi__secondary {
+  border: var(--border-width-xs) solid var(--color-alvi-primary-blue);
+  box-sizing: border-box;
+  color: var(--color-alvi-primary-blue);
+}
+
+.button__alvi__secondary:hover {
+  background: var(--color-alvi-primary-blue3);
+}
+
+.button--icon {
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-columns: 1fr repeat(2, auto) 1fr;
+  justify-items: center;
+}
+
+.button--icon label {
+  cursor: pointer;
+  grid-column-start: 2;
+}
+
+.button--icon svg {
+  cursor: pointer;
+  grid-column-start: 4;
+  margin-left: auto;
+  padding-right: 5px;
+}

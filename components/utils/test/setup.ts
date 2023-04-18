@@ -1,0 +1,4 @@
+beforeEach(() => {
+  return jest.useFakeTimers()
+})
+

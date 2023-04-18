@@ -1,0 +1,76 @@
+.formGroup {
+  border-bottom: 1px solid var(--color-neutral-gray);
+  width: 100%;
+}
+
+.forgotPassword {
+  color: var(--color-neutral-dark);
+  display: block;
+  font-size: var(--font-size-md);
+}
+
+.forgotPasswordAlvi {
+  color: var(--color-neutral-black);
+  display: block;
+  font-size: var(--font-size-sm);
+  line-height: 16px;
+}
+
+.register {
+  font-size: var(--font-size-lg);
+  text-align: center;
+  width: 100%;
+}
+
+.imageContainer {
+  margin: -20px 0px -22px -20px;
+}
+
+.loginFormContainer {
+  margin: 2.5rem 2.5rem 0 2.5rem;
+}
+
+.loginFormContainer_alvi {
+  margin: 2.5rem 2.4rem 0 2.4rem;
+}
+
+.imageContainer__image {
+  object-fit: cover;
+}
+
+.modal {
+  overflow: hidden;
+}
+.input--hideAutocomplete {
+  padding: 0 0 4px 0;
+}
+.input--hideAutocomplete:-webkit-autofill,
+.input--hideAutocomplete:-webkit-autofill:hover,
+.input--hideAutocomplete:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-base-white) inset !important;
+  box-shadow: 0 0 0px 1000px var(--color-base-white) inset !important;
+}
+
+.register__text_alvi {
+  font-size: var(--font-size-md);
+}
+
+.register__link_alvi {
+  font-size: var(--font-size-md);
+}
+.paragraph_login > span {
+  display: initial;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-md);
+}
+
+/* small only */
+@media screen and (max-width: 39.9375em) {
+  .loginFormContainer {
+    margin: 2.5rem 1.5rem 0 1.5rem;
+  }
+  .loginFormContainer_alvi {
+    margin: 2.5rem 16px 0 16px;
+  }
+}

@@ -1,0 +1,16 @@
+.chip {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  max-width: max-content;
+  padding: 3px 5px;
+}
+
+.ourLabel {
+  background-color: var(--color-background-sunkist-peach);
+  padding: 2px 4px;
+  border-radius: 4px;
+}

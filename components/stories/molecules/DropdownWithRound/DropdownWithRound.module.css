@@ -1,0 +1,16 @@
+.icon-dropdown svg {
+  transition: all .5s;
+}
+
+.icon-dropdown--open svg {
+  transition: all .5s;
+  transform: rotate(180deg);
+}
+
+.link200 {
+  height: 200px;
+}
+
+.link100 {
+  height: 100px;
+}

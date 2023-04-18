@@ -1,0 +1,185 @@
+{
+  "message": "OK",
+  "error": false,
+  "data": [
+    {
+      "title": "Bronce",
+      "name": "bronze",
+      "categories": [
+        {
+          "title": "Más Ahorro",
+          "benefits": [
+            {
+              "title": "Precio socio",
+              "description": "Precios mayoristas en todos los productos. Tú eliges cuánto llevas, pero siempre a precio mayorista, exclusivo para todos nuestros socios.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/2qwnuEJb77EiterbLwkqhg/245221a25947fda995816db8484532b2/icon_price_bronze.svg"
+            },
+            {
+              "title": "Cupones de descuento",
+              "description": "Ahorra en lo que realmente necesitas. Obtén tus cupones de descuentos adicionales y personalizados para ahorrar de verdad.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/2uJH9t26NPACtpPtAmAmf0/131d849231441f0a7974378ac726dda4/icon_offer_bronze.svg"
+            }
+          ]
+        },
+        {
+          "title": "Actividades",
+          "benefits": [
+            {
+              "title": "Eventos",
+              "description": "Lo entretenido de que seas socio en Alvi. Aprovecha invitaciones especiales a eventos organizados por Alvi y proveedores.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/6XJN6azAj0rHEHTfqGTVby/973ee2886c302875fbe184fc3ce66226/icon_event_bronze.svg"
+            },
+            {
+              "title": "Concursos y premios",
+              "description": "Concursos y premios para comerciantes como tú todos los meses. Para que tus compras en Alvi sean más entretenidas, no te pierdas las sorpresas que tenemos para ti.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/5B7DiSZTg2Aix3uqKrTDKy/ccef2745d20e875ff64546041685f932/icon_calendar_bronze.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Plata",
+      "name": "silver",
+      "categories": [
+        {
+          "title": "Más Ahorro",
+          "benefits": [
+            {
+              "title": "Precio socio",
+              "description": "Precios mayoristas en todos los productos. Tú eliges cuánto llevas, pero siempre a precio mayorista, exclusivo para todos nuestros socios.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/HDhdNRbC7SkorjvDdur25/d60cbc8cc6ba59d17bdedfb300c50e91/icon_price_silver.svg"
+            },
+            {
+              "title": "Cupones de descuento",
+              "description": "Ahorra en lo que realmente necesitas. Obtén tus cupones de descuentos adicionales y personalizados para ahorrar de verdad.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/5gkZaIYJBCKX9Uc8TX27Ob/0aa2aff2858a6937fda9d90ed738d45f/icon_offer_silver.svg"
+            }
+          ]
+        },
+        {
+          "title": "Apoyo al socio y al negocio",
+          "benefits": [
+            {
+              "title": "Academia Club Alvi",
+              "description": "Capacitate donde quiera que estés. Capacitaciones online para que los socios aprendan a cualquier hora y desde cualquier lugar.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/2DgK4LYk7GgHjHYn7LXBWP/ade4110109c15634ff202019fa3f5bd0/icon_academy_silver.svg"
+            }
+          ]
+        },
+        {
+          "title": "Actividades",
+          "benefits": [
+            {
+              "title": "Eventos",
+              "description": "Lo entretenido de que seas socio en Alvi. Aprovecha invitaciones especiales a eventos organizados por Alvi y proveedores.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/28KdUxcd8Q7Vyq7SwkOOZ7/16ddb8035a7d2f0605b24d13546b9128/icon_event_silver.svg"
+            },
+            {
+              "title": "Concursos y premios",
+              "description": "Concursos y premios para comerciantes como tú todos los meses. Para que tus compras en Alvi sean más entretenidas, no te pierdas las sorpresas que tenemos para ti.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/6mNeEffeGuCrbX0hveky4k/926ba3093f04882017fe609a90cb6fd0/icon_calendar_silver.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Oro",
+      "name": "gold",
+      "categories": [
+        {
+          "title": "Más Ahorro",
+          "benefits": [
+            {
+              "title": "Precio socio",
+              "description": "Precios mayoristas en todos los productos. Tú eliges cuánto llevas, pero siempre a precio mayorista, exclusivo para todos nuestros socios.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/5jcWlRCQlVbbfeUqzZCPay/82cd9c3ff71cd10578b5c22dd9aa1e91/icon_price_gold.svg"
+            },
+            {
+              "title": "Cupones de descuento",
+              "description": "Ahorra en lo que realmente necesitas. Obtén tus cupones de descuentos adicionales y personalizados para ahorrar de verdad.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/52OoL0LQk7W0vRumlUvdnO/6479e54d8d75da5b1f96237bcf98025b/icon_offer_gold.svg"
+            }
+          ]
+        },
+        {
+          "title": "Apoyo al socio y al negocio",
+          "benefits": [
+            {
+              "title": "Academia Club Alvi",
+              "description": "Capacitate donde quiera que estés. Capacitaciones online para que los socios aprendan a cualquier hora y desde cualquier lugar.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/2Xt2943aOvLw6FcQufDDmU/12e379718b0a8b604bf9a40545c245f6/icon_academy_gold.svg"
+            }
+          ]
+        },
+        {
+          "title": "Actividades",
+          "benefits": [
+            {
+              "title": "Eventos",
+              "description": "Lo entretenido de que seas socio en Alvi. Aprovecha invitaciones especiales a eventos organizados por Alvi y proveedores.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/267k2vwNnB4ZEXdgvw62B3/aa1d3630555e628a95c45ee289b0ee13/icon_event_gold.svg"
+            },
+            {
+              "title": "Concursos y premios",
+              "description": "Concursos y premios para comerciantes como tú todos los meses. Para que tus compras en Alvi sean más entretenidas, no te pierdas las sorpresas que tenemos para ti.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/7zm91AIGHL5OczYYGuZf5N/6f248be9521d31aa68bd630ed91f8790/icon_calendar_gold.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vip",
+      "name": "vip",
+      "categories": [
+        {
+          "title": "Más Ahorro",
+          "benefits": [
+            {
+              "title": "Precio socio",
+              "description": "Precios mayoristas en todos los productos. Tú eliges cuánto llevas, pero siempre a precio mayorista, exclusivo para todos nuestros socios.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/D5AEe2HgFdveguRZW0klK/b3686e871392f364404b96485e9305c6/icon_price_vip.svg"
+            },
+            {
+              "title": "Cupones de descuento",
+              "description": "Ahorra en lo que realmente necesitas. Obtén tus cupones de descuentos adicionales y personalizados para ahorrar de verdad.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/7s95CqdrlZnSw98RtSgK9e/df4ff2515cfc5b07ff85bee41610e364/icon_offer_vip.svg"
+            }
+          ]
+        },
+        {
+          "title": "Apoyo al socio y al negocio",
+          "benefits": [
+            {
+              "title": "Academia Club Alvi",
+              "description": "Capacitate donde quiera que estés. Capacitaciones online para que los socios aprendan a cualquier hora y desde cualquier lugar.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/2kmsEXNzoNufvLW62JvZNL/fcc73989a589e1afd7d52f095dc5c15f/icon_academy_vip.svg"
+            },
+            {
+              "title": "Crédito Alvi",
+              "description": "Compra ahora y paga en 30 días. Obtén un crédito de hasta por $1.000.000 de pesos para comprar en Alvi por 30 días sin interés, previa evaluación financiera.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/3JPqljdyRzIFyEBUkXWQzT/163bcf51a3054f081ec9acc7f92ebe44/icon_credit_vip.svg"
+            }
+          ]
+        },
+        {
+          "title": "Actividades",
+          "benefits": [
+            {
+              "title": "Eventos",
+              "description": "Lo entretenido de que seas socio en Alvi. Aprovecha invitaciones especiales a eventos organizados por Alvi y proveedores.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/7zUXzWsaRDHF8staZjaDnH/06512fcae276ce1c3e8c3fdb57278192/icon_event_vip.svg"
+            },
+            {
+              "title": "Concursos y premios",
+              "description": "Concursos y premios para comerciantes como tú todos los meses. Para que tus compras en Alvi sean más entretenidas, no te pierdas las sorpresas que tenemos para ti.",
+              "icon": "https://images.ctfassets.net/un6yvtd6uq5z/YaHv9BxsTvjv27GHIsLPp/cd4c971b6db184af945987d609423ae3/icon_calendar_vip.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

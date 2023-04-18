@@ -1,0 +1,132 @@
+.select {
+  background-color: transparent;
+  border-bottom-color: var(--color-neutral-gray);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: var(--color-text-gray-light);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  margin-top: 14px;
+  max-width: 100%;
+  padding-bottom: 2px;
+  width: 100%;
+  z-index: var(--z-index-10);
+}
+
+.select,
+.select:focus {
+  box-shadow: none;
+  font-family: var(--font-family-base);
+  outline: none !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.select--appearance-auto {
+  appearance: auto;
+}
+
+.select--appearance-none {
+  appearance: none;
+}
+
+.select--font-size-base {
+  font-size: var(--font-size-base);
+}
+
+.select--font-size-sm {
+  font-size: var(--font-size-sm);
+}
+
+.select--font-size-md {
+  font-size: var(--font-size-md);
+}
+
+.select--font-size-lg {
+  font-size: var(--font-size-lg);
+}
+
+.select--font-size-xs {
+  font-size: var(--font-size-xs);
+}
+
+.select--margin-less {
+  margin: 0;
+}
+
+
+/* color */
+.select__text--primary {
+  color: var(--color-text-primary);
+}
+
+.select__text--secondary {
+  color: var(--color-text-secondary);
+}
+
+.select__text--gray {
+  color: var(--color-text-gray-light);
+}
+
+.select__text--inactive {
+  color: var(--color-text-inactive);
+}
+
+.select__text--black {
+  color: var(--color-text-black);
+}
+
+.select__text--white {
+  color: var(--color-text-white);
+}
+
+.select__text--success {
+  color: var(--color-text-success);
+}
+
+.select__text--error {
+  color: var(--color-text-error);
+}
+
+.select__text--warning {
+  color: var(--color-text-warning);
+}
+
+.select__text--tabasco {
+  color: var(--color-primary-red-dark);
+}
+
+.select__text--neutral {
+  color: var(--color-alvi-neutral-black);
+}
+
+.select__text--guardsman-red {
+  color: var(--color-primary-red2);
+}
+
+/* alvi */
+.select__text--blue {
+  color: var(--color-alvi-primary-blue);
+}
+
+.select__text--blue2 {
+  color: var(--color-alvi-primary-blue2);
+}
+
+.select__text--neutral-alvi {
+  color: var(--color-alvi-base-black);
+}
+
+.select__text--gray-light {
+  color: var(--color-alvi-text-gray-light);
+}
+
+.select__text--neutral-dark {
+  color: var(--color-neutral-gray-dark);
+}
+
+.select__text--neutral-black {
+  color: var(--color-neutral-black);
+}

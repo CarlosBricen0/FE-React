@@ -1,0 +1,32 @@
+.onboardingContainer {
+  align-items: center;
+  background-color: rgba(40,40,40,0.4);
+  left: 0;
+  top: 0;
+}
+
+.modalStyle {
+  border-radius: 10px 10px 0px 0px !important;
+  max-width: 375px !important;
+}
+
+.imgShadow {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+}
+
+.carouselContainerClass {
+  border-radius: 0%;
+}
+
+/* Small only */
+
+@media screen and (max-width: 39.9375em) {
+  .onboardingContainer {
+    align-items: end;
+  }
+  .modalStyle {
+    max-width: none !important;
+  }
+}

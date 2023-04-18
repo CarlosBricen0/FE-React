@@ -1,0 +1,55 @@
+.formGroup {
+  width: 100%;
+  border-bottom: 1px solid var(--color-neutral-gray);
+}
+
+.formGroup__input {
+  margin-top: var(--spacing-sm);
+}
+
+.forgotPassword {
+  color: var(--color-neutral-dark);
+  font-size: var(--font-size-md);
+  display: block;
+}
+
+.register {
+  margin-top: var(--spacing-xl);
+  font-size: var(--font-size-lg);
+  text-align: center;
+  width: 100%;
+}
+
+.register__link {
+  color: var(--color-text-primary);
+}
+
+.imageContainer {
+  margin: -20px 0px -20px -20px;
+}
+
+.container {
+  margin: 20px 32px 0 32px;
+}
+
+.imageContainer__image {
+  object-fit: cover;
+}
+
+.modal {
+  overflow: hidden;
+}
+
+.input--hideAutocomplete:-webkit-autofill,
+.input--hideAutocomplete:-webkit-autofill:hover,
+.input--hideAutocomplete:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-base-white) inset !important;
+  box-shadow: 0 0 0px 1000px var(--color-base-white) inset !important;
+}
+
+/* small only */
+@media screen and (max-width: 39.9375em) {
+  .container {
+    margin: 2.5rem 1rem 0 1rem;
+  }
+}

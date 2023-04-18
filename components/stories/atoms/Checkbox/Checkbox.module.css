@@ -1,0 +1,91 @@
+.checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  appearance: none;
+}
+
+/* Base for label styling */
+.checkbox:not(:checked),
+.checkbox:checked {
+  position: absolute;
+  left: 0;
+  opacity: 0.01;
+}
+
+.checkbox:not(:checked)+label,
+.checkbox:checked+label {
+  position: relative;
+  padding: 0.8em;
+  font-size: 1.05em;
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+.checkbox:not(:checked)+label:before,
+.checkbox:checked+label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid var(--color-primary-disabled);
+  background: var(--color-base-white);
+  border-radius: .2em;
+  -webkit-transition: all .275s;
+  transition: all .275s;
+}
+
+/* checked mark aspect */
+.checkbox:not(:checked)+label>svg,
+.checkbox:checked+label>svg {
+  position: absolute;
+  top: .3em;
+  left: .23em;
+  font-size: 1.375em;
+  color: var(--color-primary-red);
+  line-height: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+/* checked mark aspect changes */
+.checkbox:not(:checked)+label>svg {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+  transform: scale(0) rotate(45deg);
+}
+
+.checkbox:checked+label>svg {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0);
+}
+
+/* alvi styles */
+.checkbox__alvi__primary:checked+label:before {
+  background: var(--color-alvi-primary-blue-gradient);
+  border-color: var(--color-alvi-primary-blue-gradient);
+}
+
+/* disabled checkbox */
+.checkbox:disabled:not(:checked)+label:before,
+.checkbox:disabled:checked+label:before {
+  box-shadow: none;
+  border-color: var(--color-neutral-gray-silver);
+  background-color: var(--color-neutral-gray);
+}
+
+.checkbox:disabled:checked+label>svg {
+  color: var(--color-neutral-gray);
+}
+
+.checkbox:disabled+label {
+  color: var(--color-neutral-gray);
+}
+
+.checkbox--round:not(:checked)+label:before,
+.checkbox--round:checked+label:before {
+  border-radius: 50em;
+}

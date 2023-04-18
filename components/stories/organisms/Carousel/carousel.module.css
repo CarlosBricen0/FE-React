@@ -1,0 +1,26 @@
+.carousel {
+  border-radius: var(--border-radius-md);
+  height: 100%;
+  width: 100%;
+}
+
+.carousel:hover button:not([class^="Button_"]) {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.carouselCards {
+  height: 100%;
+  width: 100%;
+}
+
+.carouselItem {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.dotList {
+  padding: 14px;
+  position: inherit;
+  width: 100%;
+}

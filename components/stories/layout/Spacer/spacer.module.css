@@ -1,0 +1,4 @@
+.is-visible {
+    border: 1px dashed var(--color-primary-red2);
+    background-color: var(--color-brand-sweet-pink);
+}

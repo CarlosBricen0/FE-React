@@ -1,0 +1,15 @@
+.text {
+  border-left: 1px solid var(--color-neutral-gray);
+  margin-top: 20px;
+  padding-left: 8px;
+}
+
+.textContainer--displayed {
+  transform: scaleY(1);
+  transition: all .3s linear;
+}
+
+.textContainer--collapsed {
+  transform: scaleY(0);
+  transition: all .3s linear;
+}

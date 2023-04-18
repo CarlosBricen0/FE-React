@@ -1,0 +1,9 @@
+.toFooter{
+    top: 13vh;
+}
+
+@media only screen and (min-height: 600px) and (max-height: 800px) {
+    .toFooter{
+        top: 0.1vh;
+    }
+}

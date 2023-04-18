@@ -1,0 +1,29 @@
+.internalContainer {
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+}
+
+.button {
+    padding: 24px 15px 0 15px;
+}
+
+.buttonColumn {
+    left: 0;
+    bottom: 0;
+}
+
+.modal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: var(--z-index-99999);
+    overflow: hidden auto;
+    opacity: 1;
+    padding: 0;
+    display: block;
+}

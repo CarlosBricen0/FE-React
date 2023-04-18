@@ -1,0 +1,112 @@
+.title {
+  margin: 0;
+  padding: 0;
+}
+
+/* headingLevel */
+.title__h1 {
+  font-size: var(--font-size-titles-lg);
+}
+
+.title__h2 {
+  font-size: var(--font-size-titles-md2);
+  line-height: var(--line-height-3xl);
+}
+
+.title__h3 {
+  font-size: var(--font-size-titles-md);
+  line-height: var(--line-height-2xl);
+}
+
+.title__h4 {
+  font-size: var(--font-size-titles-sm);
+  line-height: var(--line-height-2xl);
+}
+
+.title__h5 {
+  font-size: var(--font-size-titles-xs);
+  line-height: var(--line-height-xl);
+}
+
+.title__h6 {
+  font-size: var(--font-size-titles-2xs);
+  line-height: var(--line-height-lg);
+}
+
+/* textAlign */
+.title--left {
+  text-align: left;
+}
+
+.title--right {
+  text-align: right;
+}
+
+.title--center {
+  text-align: center;
+}
+
+/* fontWeight */
+.title--regular {
+  font-weight: var(--font-weight-normal);
+}
+
+.link--medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.title--semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.title--bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* size */
+.title--small.title__h1 {
+  font-size: var(--font-size-titles-lg);
+  line-height: var(--line-height-3xl);
+}
+
+.title--small.title__h2 {
+  font-size: var(--font-size-titles-md);
+  line-height: var(--line-height-2xl);
+}
+
+.title--small.title__h3 {
+  font-size: var(--font-size-titles-sm);
+  line-height: var(--line-height-xl);
+}
+
+.title--small.title__h4,
+.title--small.title__h5,
+.title--small.title__h6 {
+  font-size: var(--font-size-titles-xs);
+  line-height: var(--line-height-lg);
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .title__h1 {
+    font-size: var(--font-size-titles-xs);
+    line-height: var(--line-height-3xl);
+  }
+
+  .title__h2 {
+    font-size: var(--font-size-titles-2xs);
+    line-height: var(--line-height-lg);
+  }
+
+  .title__h3 {
+    font-size: var(--font-size-titles-3xs);
+    line-height: var(--line-height-md);
+  }
+
+  .title__h4,
+  .title__h5,
+  .title__h6 {
+    font-size: var(--font-size-titles-2xs);
+    line-height: var(--line-height-lg);
+  }
+}

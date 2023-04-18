@@ -1,0 +1,10 @@
+.cursorPointer {
+  cursor: pointer;
+  width: 100%;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .cursorPointer button {
+    color: var(--color-text-black);
+  }
+}

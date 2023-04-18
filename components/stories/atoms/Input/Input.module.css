@@ -1,0 +1,101 @@
+/* base */
+.input {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-sans);
+  text-align: center;
+  border: none;
+  -webkit-appearance: none;
+  /* required on iOS */
+  opacity: 1;
+}
+
+.input:disabled {
+  /* required on iOS */
+  -webkit-appearance: none;
+  /* required on iOS */
+  opacity: 1;
+}
+
+/* font size */
+.font--size--base {
+  font-size: var(--font-size-base);
+}
+
+.font--size--xs {
+  font-size: var(--font-size-xs);
+}
+
+.font--size--sm {
+  font-size: var(--font-size-sm);
+}
+
+.font--size--md {
+  font-size: var(--font-size-md);
+}
+
+.font--size--lg {
+  font-size: var(--font-size-lg);
+}
+
+/* remove arrows type number */
+
+/* Chrome, Safari, Edge, Opera */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input:focus {
+  outline: 0;
+}
+
+/* Border styles */
+.border--quantityButton {
+  border-top: 1px solid var(--color-neutral-gray);
+  border-bottom: 1px solid var(--color-neutral-gray);
+}
+
+/*Border Stles to NewsLetter input*/
+.padding--newsletter {
+  padding-left: 12px;
+}
+
+.padding--login--alvi {
+  padding-left: 12px;
+}
+
+.padding-attachment-page {
+  padding-bottom: 40px;
+}
+
+/* Prop hide placeholder */
+.input--placeholder:focus::placeholder {
+  color: var(--color-base-transparent);
+}
+
+.input--placeholder--gray::placeholder {
+  color: var(--color-text-inactive);
+}
+/* font weight */
+.font--weight--regular {
+  font-weight: var(--font-weight-normal);
+}
+
+.font--weight--medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font--weight--semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font--weight--bold {
+  font-weight: var(--font-weight-bold);
+}

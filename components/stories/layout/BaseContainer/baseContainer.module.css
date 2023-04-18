@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.is-playground {
+  border: 1px dashed var(--color-primary-red2);
+}
+
+.is-wrap {
+  flex-flow: wrap;
+}
+
+.flex-direction--row {
+  flex-direction: row;
+}
+
+.flex-direction--column {
+  flex-direction: column;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.border-edge--right {
+  border-right: 1px solid var(--color-neutral-gray-dark);
+}
+
+.border-edge--left {
+  border-left: 1px solid var(--color-neutral-gray-dark);
+}
+
+.border-edge--bottom {
+  border-bottom: 1px solid var(--color-neutral-gray);
+}
+
+.border-edge--all {
+  border: 1px solid var(--color-neutral-gray);
+}
+
+.absolute-default--topLeft {
+  top: 0;
+  left: 0;
+}
+
+.absolute-default--topRight {
+  top: 0;
+  right: 0;
+}
+
+.absolute-default--bottomLeft {
+  left: 0;
+  bottom: 0;
+}
+
+.absolute-default--bottomRight {
+  right: 0;
+  bottom: 0;
+}
+
+.overflow--visible {
+  overflow: visible;
+}
+
+.overflow--scroll {
+  overflow: scroll;
+}
+
+.overflow--auto {
+  overflow: auto;
+}
+
+.overflow--hidden {
+  overflow: hidden;
+}
+
+.display--block {
+  display: block;
+}
+
+.display--grid {
+  display: grid;
+}
+
+.display--none {
+  display: none;
+}
+
+.scrollbar--hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar--hidden::-webkit-scrollbar {
+  display: none;
+}

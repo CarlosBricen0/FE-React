@@ -1,0 +1,4 @@
+.radioSelect  {
+  accent-color: var(--color-campaigns-red);
+  border: 1px solid var(--color-campaigns-red);
+}

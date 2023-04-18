@@ -1,0 +1,12 @@
+.picture img {
+  position: relative !important;
+  object-fit: contain;
+}
+
+.picture--image--grayscale {
+  filter: grayscale(1);
+}
+
+.picture--non--click {
+  cursor: auto;
+}

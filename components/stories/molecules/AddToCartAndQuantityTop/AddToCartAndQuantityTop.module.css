@@ -1,0 +1,53 @@
+.quantityButton__container {
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.quantityButton__withQuantity {
+  border: 1px solid var(--color-primary-green);
+  background-color: var(--color-primary-green);
+}
+
+.quantityButton__fadeIn {
+  opacity: 0;
+  transition: opacity .2s linear;
+  background: #F6FFFD;
+  border: 1px solid var(--color-primary-green);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.quantityButton__fadeInDelay {
+  transition-delay: 3s;
+}
+
+.quantityButton__fadeOut {
+  margin-top: -30px;
+  opacity: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.quantityButton__container:hover > .quantityButton__fadeIn {
+  opacity: 1;
+  transition: opacity .2s linear;
+}
+
+.quantityButton__container:hover > .quantityButton__fadeOut {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .1s linear;
+}
+
+.loading svg {
+  animation: loading-spinner 1s linear infinite;
+  margin-top: 2px;
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

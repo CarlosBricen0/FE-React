@@ -1,0 +1,5 @@
+.overlay {
+  left: 0;
+  opacity: var(--opacity-40);
+  top: 0;
+}

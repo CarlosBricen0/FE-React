@@ -1,0 +1,19 @@
+.breadcrumbsItems::before {
+  content: '/';
+  color: var(--color-neutral-gray-dark);
+  padding: 0 0.3rem;
+}
+
+.breadcrumbsItems:first-child::before {
+  font-size: 0;
+  padding: 0;
+}
+
+.breadcrumbsItems {
+  align-items: center;
+}
+
+.breadcrumbsItems a {
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}

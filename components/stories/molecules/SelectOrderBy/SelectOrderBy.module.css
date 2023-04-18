@@ -1,0 +1,64 @@
+.optionsContainer {
+    background: var(--color-base-white);
+    border: 1px solid var(--color-neutral-gray);
+    box-shadow: 0 4px 8px rgba(27, 33, 56, 0.06);
+    margin-top: 30px;
+    position: absolute !important;
+    z-index: 999;
+    border-radius: 8px;
+}
+
+.clickContainer {
+    display: flex;
+}
+
+.ul {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.list {
+    list-style-type: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    max-width: 240px;
+    transition: background 500ms;
+}
+
+.list:hover {
+    background-color: var(--color-neutral-gray-light);
+    border-radius: 4px 4px 0 0;
+}
+
+.textCursor {
+    cursor: default;
+}
+
+.iconContainer {
+    padding-top: 3px;
+}
+
+.selectedText {
+    padding-right: 5px;
+}
+
+.separator {
+    padding: 0 3px;
+}
+
+.selected {
+    background-color: var(--color-neutral-gray-silver);
+}
+
+.display--options {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.hide--options {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+}

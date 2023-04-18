@@ -1,0 +1,16 @@
+.pill {
+    background-color: var(--color-base-white);
+    border-radius: var(--border-radius-full);
+    border: var(--border-width-xs) solid var(--color-neutral-gray-dark);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-normal);
+    padding: 8px 12px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.pill svg {
+    padding-right: 5px;
+}

@@ -1,0 +1,96 @@
+.modalBg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: var(--spacing-xl);
+  background-color: var(--color-alvi-primary-black-opacity);
+  z-index: var(--z-index-99999);
+  overflow: hidden auto;
+  opacity: 1;
+}
+
+.modal__adjusted {
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.icon__adjusted {
+  background-color: var(--color-neutral-gray-light);
+  border-radius: 40px;
+  padding: 8px;
+  margin: 15px;
+}
+
+.modal__fullScreen {
+  padding: 0;
+  display: block;
+}
+
+.modal__hideOverlay {
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.modal__customCssFullScreen {
+  display: flex;
+}
+
+.overflow {
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+.error_icon {
+  align-items: center;
+  background: var(--color-primary-red-qty-button);
+  border-radius: 55px;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  min-height: 60px;
+  min-width: 60px;
+  position: relative;
+  top: 30px;
+  width: 60px;
+  z-index: 1;
+}
+
+.error_icon_alvi {
+  align-items: center;
+  background: var(--color-alvi-primary-blue-gradient);
+  border-radius: 55px;
+  color: var(--color-alvi-icons-white);
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  min-height: 60px;
+  min-width: 60px;
+  position: relative;
+  top: 22px;
+  width: 60px;
+  z-index: 1;
+}
+
+.error_text_icon {
+  color: var(--color-alvi-icons-white);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.modal__level-1 {
+  z-index: var(--z-index-999);
+}
+
+.modal__level-2 {
+  z-index: var(--z-index-9999);
+}
+
+.modal__level-3 {
+  z-index: var(--z-index-99999);
+}

@@ -1,0 +1,21 @@
+.divider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.divider--thickness-0 {
+  border-top: var(--border-width-none);
+}
+
+.divider--thickness-1 {
+  border-top: var(--border-width-md) solid var(--color-primary-disabled);
+}
+
+.divider--thickness-2 {
+  border-top: var(--border-width-lg) solid var(--color-primary-disabled);
+}
+
+.divider--thickness-3 {
+  border-top: var(--border-width-xl) solid var(--color-primary-disabled);
+}

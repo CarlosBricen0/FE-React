@@ -1,0 +1,16 @@
+.scrollBarUnimarc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollBarUnimarc::-webkit-scrollbar-thumb {
+  background-color: var(--color-neutral-dusty-gray);
+  border-radius: var(--border-radius-sm);
+}
+
+.scrollBarUnimarc::-webkit-scrollbar-track {
+  margin: 42px 0 8px 0;
+}
+
+.scrollBarUnimarc {
+  overflow-y: scroll;
+}

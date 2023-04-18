@@ -1,0 +1,30 @@
+.notification {
+  align-items: center;
+  background-color: var(--color-neutral-black-olive);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-neutral-white);
+  display: flex;
+  padding: var(--spacing-md);
+  z-index: 9999;
+}
+
+.icon {
+  margin-left: .8rem;
+  margin-right: .8rem;
+}
+
+.notification--top-left {
+  left: var(--spacing-md);
+  top: var(--spacing-md);
+}
+
+.notification--top-center {
+  left: 50%;
+  top: var(--spacing-md);
+  transform: translateX(-50%);
+}
+
+.notification--top-right {
+  right: var(--spacing-md);
+  top: var(--spacing-md);
+}

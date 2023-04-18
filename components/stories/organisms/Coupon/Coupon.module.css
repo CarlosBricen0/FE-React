@@ -1,0 +1,32 @@
+.coupon--smallScreen {
+  display: flex;
+  background-image: radial-gradient(circle at 0% 50%, transparent 16px, white 17px, white 80%, transparent 80%), radial-gradient(circle at 100% 50%, transparent 16px, white 17px, white 80%, transparent 80%);
+  box-shadow: 20px 20px 80px rgba(27, 33, 56, 0.05);
+}
+
+.coupon--bigScreen {
+  display: flex;
+  filter: drop-shadow(0px 0px 1px #C4C4C4) drop-shadow(20px 20px 80px rgba(27, 33, 56, 0.05));
+}
+
+.coupon--bigScreen__top {
+  background-color: var(--color-neutral-white);
+}
+
+.coupon--bigScreen__middle {
+  background-image:
+    radial-gradient(circle at 0% 50%,
+      transparent 18px,
+      white 18px,
+      white 80%,
+      transparent 80%),
+    radial-gradient(circle at 100% 50%,
+      transparent 18px,
+      white 18px,
+      white 80%,
+      transparent 80%);
+}
+
+.coupon--bigScreen__bottom {
+  background-color: var(--color-neutral-white);
+}

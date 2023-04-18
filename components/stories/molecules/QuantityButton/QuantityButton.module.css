@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+
+.disabled {
+  opacity: 0.7;
+}
+
+.alert {
+  position: absolute;
+  top: 36px;
+  width: 102px;
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.loading svg {
+  animation: loading-spinner 1s linear infinite;
+  margin-bottom: 2px;
+}
+
+.quantityBtn--unimarc {
+  padding: 0;
+  border: none;
+  background: var(--color-primary-red-qty-button);
+}
+
+.quantityBtn--unimarc .quantityBtn--circle {
+  align-items: center;
+  display: flex;
+  margin: auto;
+  position: relative;
+}
+
+.quantityBtn--alvi {
+  background: var(--color-alvi-primary-blue-gradient);
+  border: none;
+  padding: 0;
+}
+
+.quantityBtn--alvi .quantityBtn--circle {
+  align-items: center;
+  box-shadow: var(--box-shadow-2xs);
+  display: flex;
+  margin: auto;
+  position: relative;
+}
+
+.quantityBtn--circle svg {
+  background-color: var(--color-base-white);
+  border-radius: var(--border-radius-full);
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* make the button shake */
+.quantityBtn--shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 2s;
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .alert {
+    width: initial;
+  }
+}

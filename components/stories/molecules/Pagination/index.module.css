@@ -1,0 +1,15 @@
+.no-select {
+  user-select: none;
+}
+
+.item--base {
+  overflow: hidden
+}
+
+.item--base:hover {
+  background-color: rgba(196, 196, 196, 0.2);
+}
+
+.animation--select {
+  transition: color 50ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 100ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}

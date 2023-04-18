@@ -1,0 +1,104 @@
+.toggle {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+.toggle > .toggleInput {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
+}
+
+.toggle > .toggleInner {
+  width: auto;
+  height: 35px;
+  max-height: 35px;
+  background: var(--color-neutral-gray);
+  border-radius: var(--border-radius-full);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggleInput:not(:checked)+.toggleInner>.leftClass,
+.toggleInput:checked+.toggleInner>.rightClass {
+  color: var(--color-neutral-gray-dark);
+  padding: 0 16px;
+  width: 50%;
+  white-space: nowrap;
+}
+
+.toggleInput:checked+.toggleInner>.leftClass,
+.toggleInput:not(:checked)+.toggleInner>.rightClass {
+  background: var(--color-base-white);
+  border-radius: var(--border-radius-full);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  height: calc(100% - 6px);
+  cursor: pointer;
+  width: 50%;
+  white-space: nowrap;
+}
+
+.toggleInput:focus:not(:active):not(:checked)+.toggleInner>.rightClass {
+  -webkit-animation: slide-right 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-right 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  z-index: 1;
+}
+
+.toggleInput:focus:not(:active):checked+.toggleInner>.leftClass {
+  -webkit-animation: slide-left 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-left 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  z-index: 1;
+}
+
+.toggleInput+.toggleInner>.leftClass {
+  -webkit-transform: translateX(-97%);
+  transform: translateX(-97%);
+}
+
+.toggleInput+.toggleInner>.rightClass {
+  -webkit-transform: translateX(97%);
+  transform: translateX(97%);
+}
+
+.toggleInput:checked+.toggleInner>.leftClass {
+  width: 50.7%;
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(97%);
+            transform: translateX(97%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-97%);
+            transform: translateX(-97%);
+  }
+}
+
+.text-position-center {
+  justify-content: center;
+}
+
+.text-position-end {
+  justify-content: flex-end
+}
