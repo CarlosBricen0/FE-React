@@ -9,7 +9,6 @@ export interface IconProps {
   color?: string;
   customSize?: number;
   name: keyof (typeof Icons);
-  site?: Site;
   sizes?: SizeIcon;
   strokeWidth?: string;
   viewBox?: string;
@@ -31,7 +30,6 @@ export const Icon = ({
   color = getGlobalStyle('--color-icons-primary'),
   customSize,
   name = 'Error',
-  site = 'unimarc',
   sizes = 'xs',
   strokeWidth,
   onClick,
@@ -46,7 +44,6 @@ export const Icon = ({
     color,
     id,
     role,
-    site,
     sizemap,
     strokeWidth,
     style: {

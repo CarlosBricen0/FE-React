@@ -17,7 +17,6 @@ export type Color =
   'blue' |
   'blue2' |
   'neutral' |
-  'neutral-alvi' |
   'neutral-dark' |
   'neutral-black' |
   'gray-light' |

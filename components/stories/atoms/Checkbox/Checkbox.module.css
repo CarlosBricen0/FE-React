@@ -63,12 +63,6 @@
   transform: scale(1) rotate(0);
 }
 
-/* alvi styles */
-.checkbox__alvi__primary:checked+label:before {
-  background: var(--color-alvi-primary-blue-gradient);
-  border-color: var(--color-alvi-primary-blue-gradient);
-}
-
 /* disabled checkbox */
 .checkbox:disabled:not(:checked)+label:before,
 .checkbox:disabled:checked+label:before {

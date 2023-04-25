@@ -28,7 +28,6 @@ export interface InputProps extends Omit<React.HTMLProps<HTMLInputElement>, 'ref
   padding?: string;
   placeholderColor?: string;
   placeholderFocus?: string;
-  site?: 'unimarc' | 'alvi';
   textAlign?: TextAlign;
   title?: string;
   type?: string;
@@ -79,7 +78,6 @@ export const Input = React.forwardRef(function Input({
             [styles[`input--${placeholderFocus}`]]: placeholderFocus,
             [styles[`border--quantityButton`]]: border === 'quantityButton',
             [styles[`padding--newsletter`]]: padding === 'newsletter',
-            [styles[`padding--login--alvi`]]: padding === 'login--alvi',
             [styles[`padding-attachment-page`]]: padding === 'attachment-page',
             [styles[`input--placeholder--${placeholderColor}`]]: placeholderColor
           }, customClassName)}

@@ -75,10 +75,6 @@
   top: 50%;
 }
 
-.color-arrow--black::after{
-  border-color: var(--color-alvi-base-black) transparent transparent transparent;
-}
-
 .color-arrow--warning-light::after{
   border-color: var(--color-feedback-warning-light) transparent transparent transparent;
 }

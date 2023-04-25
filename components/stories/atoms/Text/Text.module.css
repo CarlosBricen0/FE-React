@@ -149,10 +149,6 @@
   color: var(--color-primary-red-dark);
 }
 
-.text--neutral {
-  color: var(--color-alvi-neutral-black);
-}
-
 .text--guardsman-red {
   color: var(--color-primary-red2);
 }
@@ -193,23 +189,6 @@
 
 .text--line-through {
   text-decoration: line-through;
-}
-
-/* alvi */
-.text--blue {
-  color: var(--color-alvi-primary-blue);
-}
-
-.text--blue2 {
-  color: var(--color-alvi-primary-blue2);
-}
-
-.text--neutral-alvi {
-  color: var(--color-alvi-base-black);
-}
-
-.text--gray-light {
-  color: var(--color-alvi-text-gray-light);
 }
 
 .text--neutral-dark {
