@@ -19,6 +19,5 @@ export const green = Template.bind({})
 green.args = {
   checked:false,
   disabled: false,
-  site:'unimarc',
   type:'green'
 }

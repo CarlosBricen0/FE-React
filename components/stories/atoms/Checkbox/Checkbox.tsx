@@ -28,7 +28,6 @@ export const Checkbox = ({
   iconColor,
   id,
   nameIcon = 'Close',
-  site = 'unimarc',
   sizeIcon= 'xs',
   title,
   type = 'checkbox',
@@ -36,15 +35,10 @@ export const Checkbox = ({
   onClick
 }: CheckboxProps): React.ReactElement => {
 
-  const classSite = site === 'alvi' && styles.checkbox__alvi__primary
-
   return (
     <>
       <input
         checked={value}
-        className={classNames(styles.checkbox, customClass, classSite, `isChecked_${value}`, {
-          [styles[`checkbox--${type}`]]: type
-        })}
         disabled={disabled}
         id={id || styles.checkbox}
         onChange={onClick}

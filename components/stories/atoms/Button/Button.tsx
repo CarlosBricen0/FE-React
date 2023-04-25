@@ -8,7 +8,6 @@ import { Icon } from '../Icon/Icon'
 import { Text } from '../'
 
 export type ButtonStatus = 'initial' | 'loading' | 'disabled' | 'disabled-red';
-export type Type = 'primary' | 'secondary' | 'primary-ca' | 'secondary-ca' | 'sub-category' | 'plain' | 'semibold' | 'primary-alvi' | 'primary-out-hover' | 'primary-green' | 'secondary-green'
 export type Size = 'xs' | 'small' | 'medium' | 'large' | 'sm' | 'md' | 'lg' | 'xl';
 
 export interface ButtonProps {
@@ -17,7 +16,7 @@ export interface ButtonProps {
   border?: CSSProperties['border'];
   borderRadius?: string;
   buttonRef?: React.Ref<HTMLButtonElement>;
-  color?: string;
+  color: string;
   customClassName?: string;
   fontSize?: string;
   fontWeight?: string;
@@ -32,7 +31,6 @@ export interface ButtonProps {
   site?: Site;
   size?: Size;
   status?: ButtonStatus;
-  type?: Type;
   underline?: typeof Text.arguments.underline;
   width?: string;
   iconName?: keyof (typeof Icons);
@@ -59,11 +57,6 @@ const typeColors = {
   'sub-category': brandWhite
 }
 
-const typedColorsAlvi = {
-  'primary': brandWhite,
-  'secondary': getGlobalStyle('--color-neutral-gray-dark')
-}
-
 export const Button = ({
   actionType,
   background,
@@ -83,10 +76,8 @@ export const Button = ({
   maxWidth,
   minWidth = '200px',
   padding,
-  site = 'unimarc',
   size = 'medium',
   status = 'initial',
-  type = 'primary',
   underline = 'none',
   width = 'auto',
   onClick,
@@ -94,14 +85,12 @@ export const Button = ({
   onMouseLeave
 }: ButtonProps): React.ReactElement<ButtonProps> => {
 
-  const classSite = site === 'alvi' ? styles[`button__alvi__${type}`] : ''
-  const fontColor = site === 'alvi' ? typedColorsAlvi[type] : typeColors[type]
+  
 
   return (
     <button
       aria-label={label}
-      className={classNames(styles.button, customClassName, classSite, {
-        [styles[`button__${type}`]]: type,
+      className={classNames(styles.button, customClassName, {
         [styles[`button--${size}`]]: size,
         [styles[`button--${status}`]]: status,
         [styles[`button--${underline}`]]: underline,
@@ -131,7 +120,7 @@ export const Button = ({
       type={actionType}
     >
       <GetLabelButton
-        color={fontColor}
+        color={color}
         customClassName={styles.icon}
         iconName={iconName}
         label={label}
