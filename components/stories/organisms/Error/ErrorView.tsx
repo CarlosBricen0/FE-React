@@ -58,13 +58,11 @@ export const ErrorView = ({
   colorErrorType = 'gray',
   backgroundButton,
   errorType = '500',
-  site = 'unimarc',
   title = 'Lo sentimos',
   onClick
 }: ErrorViewProps) => {
-  const siteName = site === 'unimarc'
   const errorImageValidation = errorImage?.img
-  const customColorError = site === 'unimarc' ? 'gray' : 'neutral-dark'
+  const customColorError = 'neutral-dark'
 
   return (
     <Container
@@ -107,7 +105,7 @@ export const ErrorView = ({
             </Text>
             <Text
               clickable='pointer'
-              color={customColorError}
+              color={colorErrorType}
               fontSize='xl'
               fontWeight='semibold'
               textAlign='center'
@@ -122,7 +120,6 @@ export const ErrorView = ({
               height='45px'
               label={buttonLabel}
               onClick={onClick}
-              site={site}
               size='xs'
               width='202px'
             />
@@ -239,8 +236,7 @@ export const ErrorView = ({
               height='35px'
               label={buttonLabel}
               onClick={onClick}
-              site={site}
-              size={siteName ? 'small' : 'md'}
+              size={'md'}
               width='321px'
             />
           </Column>

@@ -14,7 +14,6 @@ import {
   Row,
   Spacer
 } from '../../layout'
-import { Site } from '../../../shared/interfaces/Site'
 import styles from './Modal.module.css'
 
 interface ModalProps {
@@ -54,7 +53,6 @@ interface ModalProps {
   modalTitle?: string;
   padding?: string;
   position?: Position;
-  site?: Site;
   sizeIconClose?: number;
   titleModalMobile?: boolean;
   top?: string;
@@ -82,10 +80,7 @@ export const Modal = ({
   color='white',
   colorButtonDrag = getGlobalStyle('--color-neutral-gray-silver'),
   customCssFullScreen,
-  customIcon = 'AlertIcon',
-  customIconPadding = '0px',
   dragRatio = 0.5,
-  errorModal,
   fontSizeMobile,
   fullScreen,
   halfScreen = false,
@@ -94,7 +89,6 @@ export const Modal = ({
   hideOverlay = false,
   iconPadding,
   iconProps,
-  iconSize = 26.5,
   isCloseIcon = true,
   isDraggable = true,
   isOpen = false,
@@ -109,8 +103,7 @@ export const Modal = ({
   minHeightFullScreen = 'calc(100vh - 60px)',
   modalTitle = '',
   padding = '20px',
-  position = null,
-  site = 'unimarc',
+  position = 'initial',
   sizeIconClose = 14,
   titleModalMobile = false,
   top,
@@ -200,11 +193,6 @@ export const Modal = ({
     modalRef.current.style.transform = `translateY(${dragProps.current.transalteY}px)`
   }
 
-  const modalIconName = customIcon
-  const modalIconSize = iconSize
-  const isUnimarc: boolean = site === 'unimarc'
-  const classes = `${isUnimarc ? classNames(styles.error_icon) : classNames(styles.error_icon_alvi)}`
-
   useEffect(() => {
     if (isOpen && typeof toggleOutside === 'function') window.addEventListener('keyup', e => { return e.code === 'Escape' && toggleOutside() })
     return () => { return isOpen && window.removeEventListener('keyup', () => { return }) }
@@ -226,40 +214,11 @@ export const Modal = ({
                 [styles[`modal__level-${level}`]]: !!level
               }
             )}
-            maxHeight={null}
-            maxWidth={null}
+            maxHeight={maxHeight}
+            maxWidth={maxWidth}
             position={position}
             top={top}
           >
-            {/* Icon on top of modal */}
-            {
-              (errorModal && isUnimarc) &&
-              <>
-                <div className={classes}>
-                  <Container justifyContent='center' padding={customIconPadding}>
-                    <Icon
-                      color={color}
-                      customSize={modalIconSize}
-                      name={modalIconName}
-                    />
-                  </Container>
-                </div>
-              </>
-            }
-            {
-              (errorModal && !isUnimarc) &&
-              <>
-                <div className={classes}>
-                  <Container justifyContent='center' padding={customIconPadding}>
-                    <Icon
-                      color={color}
-                      customSize={modalIconSize}
-                      name={modalIconName}
-                    />
-                  </Container>
-                </div>
-              </>
-            }
             <Container
               customHeight='100%'
               customWidth='100%'

@@ -17,7 +17,6 @@ export const AddToCartQuoter = ({
   quantityButtonStyles,
   refAddToCart,
   showQuantityButton = false,
-  site = 'alvi',
   statusButton,
   handleOnClick,
   onBlurInput,
@@ -50,7 +49,6 @@ export const AddToCartQuoter = ({
         label={buttonLabel}
         minWidth={quantityButtonStyles?.minWidth || '100px'}
         onClick={() => { handleOnClick({ itemId }) }}
-        site={site}
         size='xs'
         status={statusButton}
         width={quantityButtonStyles?.maxWidth ?? undefined}
@@ -68,7 +66,6 @@ export const AddToCartQuoter = ({
         isLoading={isLoading}
         onBlurInput={onBlurInput}
         quantityButtonStyles={quantityButtonStyles}
-        site={site}
         value={quantity}
       />
       }

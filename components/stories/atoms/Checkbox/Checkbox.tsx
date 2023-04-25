@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import { Icon } from '..'
 import { Icons } from '../../../assets/SvgComponents/SvgIcons'
 import { IconProps } from '../Icon/Icon'
-import { Site } from '../../../shared/interfaces/Site'
 import styles from './Checkbox.module.css'
 
 export interface CheckboxProps {

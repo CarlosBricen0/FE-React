@@ -17,7 +17,6 @@ import {
 } from '../../layout'
 import { v4 as uuid } from 'uuid'
 import { getGlobalStyle } from '../../../helpers'
-import { Site } from '../../../shared/interfaces/Site'
 import { Carousel } from '../Carousel/Carousel'
 import MultiCarousel from 'react-multi-carousel'
 import styles from './Onboarding.module.css'

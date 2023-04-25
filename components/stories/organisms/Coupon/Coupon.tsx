@@ -25,15 +25,16 @@ export type CouponStatus = 'active' | 'used' | undefined | null;
 export interface CouponProps extends CouponDescriptionProps {
   activeButtonRef?: React.Ref<HTMLButtonElement>;
   activeButtonText?: string;
+  backgroundColor?:string;
   badgeText?: string;
   className?: string;
+  colorText:Color;
   defaultButtonText?: string;
   disabled?: boolean;
   imageSrc?: string;
   index?: number;
   isFetching?: boolean;
   loading?: boolean;
-  site?: 'unimarc' | 'alvi';
   status?: CouponStatus;
   unipay?: boolean;
   usedButtonText?: string;
@@ -63,14 +64,15 @@ const TagBackgroundColorsMap: Record<'unimarc' | 'alvi', string> = {
 export const Coupon = React.forwardRef(function Coupon({
   activeButtonRef,
   activeButtonText = 'Activado',
+  backgroundColor,
   badgeText,
   className,
+  colorText='black',
   defaultButtonText = 'Activar',
   disabled,
   imageSrc,
   isFetching,
   loading,
-  site = 'unimarc',
   status,
   unipay,
   usedButtonText = 'Utilizado',
@@ -88,21 +90,20 @@ export const Coupon = React.forwardRef(function Coupon({
       case 'active':
         return {
           label: activeButtonText,
-          background: getGlobalStyle(site === 'alvi' ? '--color-alvi-primary-yellow-gradient-button' : '--color-primary-pink-light'),
-          color: getGlobalStyle(site === 'alvi' ? '--color-alvi-base-black' : '--color-primary-red-darker'),
-          fontWeight: getGlobalStyle(site === 'alvi' ? '--font-weight-semibold' : '--font-weight-bold')
+          background: getGlobalStyle('--color-primary-pink-light'),
+          color: getGlobalStyle('--color-primary-red-darker'),
+          fontWeight: getGlobalStyle('--font-weight-bold')
         }
       case 'used':
         return {
           label: usedButtonText,
           status: 'disabled',
-          fontWeight: getGlobalStyle(site === 'alvi' ? '--font-weight-semibold' : '--font-weight-bold')
+          fontWeight: getGlobalStyle('--font-weight-bold')
         }
       default:
         return {
           label: defaultButtonText,
-          site,
-          fontWeight: getGlobalStyle(site === 'alvi' ? '--font-weight-semibold' : '--font-weight-bold')
+          fontWeight: getGlobalStyle('--font-weight-bold')
         }
     }
   }, [status])
@@ -120,9 +121,6 @@ export const Coupon = React.forwardRef(function Coupon({
   const handleParentClick = () => {
     onClickViewProducts()
   }
-
-  const tagTextColor = TagTextColorsMap[site]
-  const tagBackgroundColor = TagBackgroundColorsMap[site]
 
   if (isFetching) {
     return <CouponLoader />
@@ -217,7 +215,7 @@ export const Coupon = React.forwardRef(function Coupon({
             </Container>
 
             <Container
-              backgroundColor={getGlobalStyle(tagBackgroundColor)}
+              backgroundColor={backgroundColor}
               borderRadius={getGlobalStyle('--border-radius-2xs')}
               clickable='pointer'
               customWidth='max-content'
@@ -228,7 +226,7 @@ export const Coupon = React.forwardRef(function Coupon({
             >
               <Text 
                 clickable='pointer' 
-                color={tagTextColor} 
+                color={colorText} 
                 fontSize='xs'
               >
                 {badgeText || '.'}
@@ -319,7 +317,7 @@ export const Coupon = React.forwardRef(function Coupon({
               )}
               
               <Container
-                backgroundColor={getGlobalStyle(tagBackgroundColor)}
+                backgroundColor={backgroundColor}
                 borderRadius={getGlobalStyle('--border-radius-2xs')}
                 clickable='pointer'
                 customWidth='max-content'
@@ -330,7 +328,7 @@ export const Coupon = React.forwardRef(function Coupon({
               >
                 <Text 
                   clickable='pointer' 
-                  color={tagTextColor} 
+                  color={colorText} 
                   fontSize='sm'
                 >
                   {badgeText || '.'}

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { getGlobalStyle } from '../../../helpers'
-import { Site } from '../../../shared/interfaces/Site'
 import { Icon, Input } from '../../atoms'
 import { Container, Row } from '../../layout'
 import { AddOrRemoveBtn } from './AddRemoveBtn'
@@ -20,6 +19,7 @@ export interface QuantityButtonProps {
   alert?: string;
   alternativeBackground?: string;
   autoFocus?: boolean;
+  background?: string;
   disabled?: boolean;
   disabledInput?: boolean;
   disabledLess?: boolean;
@@ -35,7 +35,6 @@ export interface QuantityButtonProps {
   quantity?: number;
   quantityButtonStyles?: QuantityButtonStylesProps;
   rebranding?: boolean
-  site?: 'unimarc' | 'alvi';
   size?: 'md' | 'sm';
   textAfterQuantity?: string;
   value?: number | string;
@@ -47,18 +46,6 @@ export interface QuantityButtonProps {
   onKeyPress?: (e?: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
-const quantityParams = (site: Site, alternativeBackground: string) => {
-  return {
-    siteColor: alternativeBackground || (
-      site === 'unimarc' ?
-        getGlobalStyle('--color-primary-red-qty-button') :
-        getGlobalStyle('--color-alvi-primary-blue-gradient')
-    ),
-    iconSiteColor: site === 'unimarc' ?
-      getGlobalStyle('--color-primary-red') :
-      getGlobalStyle('--color-alvi-primary-blue')
-  }
-}
 
 const getQuantityMessage = (
   isMaxQuantity: boolean,
@@ -78,7 +65,7 @@ const getQuantityMessage = (
 }
 
 export const QuantityButton = ({
-  alternativeBackground,
+  background,
   disabled = false,
   disabledInput = false,
   disabledLess = false,
@@ -93,7 +80,6 @@ export const QuantityButton = ({
     maxWidth: '100%',
     sizeCircle: 25
   },
-  site = 'unimarc',
   textAfterQuantity = '',
   value,
   handleAdd,
@@ -110,7 +96,6 @@ export const QuantityButton = ({
   const isLeftDisabled = disabled || disabledLess || isMinQuantity
   const quantityMessage = getQuantityMessage(isMaxQuantity, showValue, textAfterQuantity)
 
-  const { siteColor, iconSiteColor } = quantityParams(site, alternativeBackground)
 
   const handleValidateInput = (e) => {
     if (/([a-zA-Z]|[`!@#$%^&*()_+\-=[\]{}':"\\|,.<>/?~])/.test(e.target.value)) return
@@ -129,8 +114,8 @@ export const QuantityButton = ({
   return (
     <Container
       alignItems='center'
-      background={siteColor}
-      backgroundColor={siteColor}
+      background={background}
+      backgroundColor={background}
       borderRadius={quantityButtonStyles.maxHeight}
       customClassName={shake ? styles['quantityBtn--shake'] : ''}
       justifyContent='center'
@@ -142,16 +127,10 @@ export const QuantityButton = ({
       tagName='article'
     >
       <AddOrRemoveBtn
-        alternativeBackground={siteColor}
-        circleStyle={{
-          iconColor: iconSiteColor,
-          sizeButton: quantityButtonStyles.maxHeight,
-          sizeCircle: quantityButtonStyles.sizeCircle
-        }}
+        alternativeBackground={background}
         disabled={isLeftDisabled}
         handleQuantity={handleRemove}
         handleShake={addChake}
-        site={site}
         type='left'
       />
       {!isLoading ? (
@@ -178,16 +157,10 @@ export const QuantityButton = ({
       )
       }
       <AddOrRemoveBtn
-        alternativeBackground={siteColor}
-        circleStyle={{
-          iconColor: iconSiteColor,
-          sizeButton: quantityButtonStyles.maxHeight,
-          sizeCircle: quantityButtonStyles.sizeCircle
-        }}
+        alternativeBackground={background}
         disabled={isRightDisabled}
         handleQuantity={handleAdd}
         handleShake={addChake}
-        site={site}
         type='right'
       />
     </Container>

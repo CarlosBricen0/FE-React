@@ -28,32 +28,6 @@
     margin-bottom: 2px;
 }
 
-.quantityBtn--unimarc {
-    background: var(--color-primary-red-qty-button);
-    border: none;
-    padding: 0;
-}
-
-.quantityBtn--unimarc .quantityBtn--circle {
-    align-items: center;
-    display: flex;
-    margin: auto;
-    position: relative;
-}
-
-.quantityBtn--alvi {
-    background: var(--color-alvi-primary-blue-gradient);
-    border: none;
-    padding: 0;
-}
-
-.quantityBtn--alvi .quantityBtn--circle {
-    align-items: center;
-    box-shadow: var(--box-shadow-2xs);
-    display: flex;
-    margin: auto;
-    position: relative;
-}
 
 .quantityBtn--circle svg {
     background-color: var(--color-base-white);
