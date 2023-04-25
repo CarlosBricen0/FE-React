@@ -1,7 +1,6 @@
 import classNames from 'classnames'
 import { Icons } from '../../../assets/SvgComponents/SvgIcons'
 import { getGlobalStyle } from '../../../helpers'
-import { Site } from '../../../shared/interfaces/Site'
 import { Icon, Text } from '../../atoms'
 import { Container } from '../../layout'
 import { BaseContainerProps } from '../../layout/BaseContainer/BaseContainer'
@@ -13,22 +12,19 @@ export interface NotificationProps {
   align?: NotificationAlign
   icon?: keyof (typeof Icons)
   margin?: string
+  borderRadius?:string;
   message?: React.ReactNode
   padding?: string
   position?: BaseContainerProps['position']
   show?: boolean
   showCloseIcon?: boolean
-  site?: Site
   onClose?: () => void
 }
 
-const borderRadiusBySite = {
-  alvi: getGlobalStyle('--border-radius-md'),
-  unimarc: '0px'
-}
 
 export const Notification = ({
   align = 'top-right',
+  borderRadius,
   icon,
   margin,
   message,
@@ -36,14 +32,13 @@ export const Notification = ({
   position = 'absolute',
   show,
   showCloseIcon,
-  site = 'unimarc',
   onClose
 } : NotificationProps) => {
   if (!show) return null
 
   return (
     <Container
-      borderRadius={borderRadiusBySite[site]}
+      borderRadius={borderRadius}
       className={classNames(
         styles['notification'],
         {

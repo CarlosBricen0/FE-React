@@ -3,42 +3,38 @@ import { FailModalProps } from '..'
 import { getGlobalStyle } from '../../../../helpers'
 import {
   Button,
-  Icon,
   Text,
   Title
 } from '../../../atoms'
 import { Container, Spacer } from '../../../layout'
 
 const ContentModal = ({
-  alviSite,
-  backgroundColor,
+  backgroundColor='',
   boldButton,
-  buttonStatus,
-  buttonText,
+  buttonText='',
   buttonWidth,
+  containerPadding,
   content,
   contentColor,
   contentPosition,
-  labelSecondary,
+  labelSecondary='',
   showButton = true,
   sizeTitle,
   title,
   titleColor,
   titlePosition,
-  unimarcSite,
   action,
   handleKeepAddress,
   onClick
 }: FailModalProps) => {
-  const containerPadding = unimarcSite ? '0px 4px' : ''
-  const btnColor = getGlobalStyle(alviSite ? '--color-alvi-primary-blue' : '--color-primary-red')
+  const btnColor = getGlobalStyle( '--color-primary-red')
 
   return (
     <>
       <Spacer.Horizontal size={32} />
       <Container padding={containerPadding}>
         <Title
-          backgroundColor={null}
+          backgroundColor={backgroundColor}
           color={titleColor}
           customFontSize={sizeTitle}
           fontWeight='semibold'
@@ -47,23 +43,6 @@ const ContentModal = ({
           textAlign={titlePosition}
         />
       </Container>
-      {alviSite && (
-        <Container
-          absoluteDefault='topRight'
-          justifyContent='center'
-          maxWidth='80px'
-          padding='20px 0 0 0'
-          position='absolute'
-        >
-          <Icon
-            clickable='pointer'
-            color={getGlobalStyle('--color-icons-gray')}
-            customSize={18}
-            name='Close'
-            onClick={onClick}
-          />
-        </Container>
-      )}
       <Spacer.Horizontal size={24} />
       <Container padding={containerPadding}>
         <Text
@@ -83,7 +62,7 @@ const ContentModal = ({
         label={buttonText}
         onClick={action}
         size='large'
-        status={alviSite ? buttonStatus : 'initial'}
+        status={ 'initial'}
         width={buttonWidth}
       />
       {showButton && (

@@ -22,7 +22,6 @@ export interface CartIconProps {
   icon?: keyof (typeof Icons);
   quantity?: number;
   quantityLoading?: boolean;
-  site?: 'unimarc' | 'alvi';
   total?: string;
   onClickCart?: () => void;
 }
@@ -38,13 +37,9 @@ export const CartIcon = ({
   icon = 'Cart',
   quantity = 96,
   quantityLoading = false,
-  site = 'unimarc',
   total,
   onClickCart
 }: CartIconProps): React.ReactElement<CartIconProps> => {
-  const unimarcSite = site === 'unimarc'
-  const classNameSite = unimarcSite ? '' : styles.containerQuantityAlvi
-  const styleLoading = unimarcSite ? 'loading' : 'loading-alvi'
   const customHeight = total ? '50px' : '35px'
   return (
     <Column
@@ -83,21 +78,20 @@ export const CartIcon = ({
           alignItems='center'
           backgroundColor={backgroundQuantity}
           borderRadius='50%'
-          customClassName={classNameSite}
           customHeight={customSizesQuantityContainer}
           height='100%'
           justifyContent='center'
           maxWidth={customSizesQuantityContainer}
-          minWidth={unimarcSite ? 'initial' : customSizesQuantityContainer}
+          minWidth={customSizesQuantityContainer}
           position='absolute'
           role='quantityBalloon'
         >
           {quantityLoading && (
             <Container customHeight='inherit' position='absolute'>
-              <div className={styles[styleLoading]} >
+              <div>
                 <Icon
                   color={colorLoaderQuantity}
-                  customSize={unimarcSite ? 15 : 19}
+                  customSize={19}
                   name='Loading'
                 />
               </div>
@@ -107,7 +101,7 @@ export const CartIcon = ({
             <Text
               clickable='pointer'
               color={colorQuantity}
-              fontSize={unimarcSite ? 'xs' : customSizesQuantity}
+              fontSize={customSizesQuantity}
               fontWeight='semibold'
               textAlign='center'
             >

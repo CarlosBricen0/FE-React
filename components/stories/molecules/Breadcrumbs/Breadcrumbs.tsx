@@ -8,13 +8,8 @@ import { BigScreen } from '../../../helpers'
 
 interface BreadType {
   label: string;
+  url: string;
   oneClick?: (props?: string) => void;
-  url?: string;
-}
-
-interface LinkProps {
-  color: typeof Text.arguments.color;
-  fontWeight: typeof Text.arguments.fontWeight;
 }
 
 interface SizeProp {
@@ -22,37 +17,29 @@ interface SizeProp {
 }
 
 export interface BreadcrumbsProps {
-  colorAlvi?: boolean;
+  color?: string;
   links: Array<BreadType>;
   linkWrapper?: React.FunctionComponent;
   afterClick?: (props?: string) => void;
 }
 
 export const Breadcrumbs = ({
+  color,
   links,
+  linkWrapper,
   afterClick,
-  colorAlvi,
-  linkWrapper
 }: BreadcrumbsProps): React.ReactElement<BreadcrumbsProps> => {
-
-  const { color: { brand }, colorAlvi : { brandAlvi } } = choices
-
-  const colorLastChild = colorAlvi ? brandAlvi.midnightBlue : brand.tabasco
-  const basePropsAlvi = colorAlvi ? { color: 'blue', fontWeight: 'semibold' } : { color: 'tabasco', fontWeight: 'semibold' } 
 
   return (
     <BigScreen>
       <Container alignItems='center' isWrap>
         {links?.map((link, index) => {
           const isLastChild = (links?.length - 1) === index
-          const colorLink = isLastChild ? colorLastChild : brand.doveGray
-          const baseProps: LinkProps = isLastChild ? basePropsAlvi : { color: 'gray', fontWeight: 'regular' }
           const LinkFontsize = ({ size }: SizeProp) => {
             return link?.oneClick ?
               (
                 <Link
-                  {...baseProps}
-                  color={colorLink}
+                  color={color}
                   customClassName='bread-link'
                   fontSize={size}
                   href={link?.url}
@@ -67,7 +54,7 @@ export const Breadcrumbs = ({
                 </Link>
               ) :
               (
-                <Text {...baseProps} fontSize={size}>
+                <Text fontSize={size}>
                   {link?.label}
                 </Text>
               )

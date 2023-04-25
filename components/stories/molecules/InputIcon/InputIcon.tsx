@@ -33,7 +33,6 @@ export interface InputIconProps {
   placeholder?: string;
   placeholderColor?: string;
   placeholderFocus?: string;
-  site?: 'unimarc' | 'alvi';
   textAlignInput?: TextAlignInput;
   titleSearch?: string;
   value?: string;
@@ -70,7 +69,6 @@ export const InputIcon = ({
   placeholder,
   placeholderColor,
   placeholderFocus,
-  site = 'unimarc',
   textAlignInput = 'left',
   titleSearch = 'titleSearch',
   value,
@@ -82,10 +80,7 @@ export const InputIcon = ({
   onKeyPressSearch,
   onFocusSearch
 }: InputIconProps): React.ReactElement<InputIconProps> => {
-  const unimarcSite = site === 'unimarc'
   const alviHeight = '40px'
-  const customHeight = unimarcSite ? height : alviHeight
-  const customSizeInputIcon = unimarcSite ? customSizeIcon : 21
 
   const ClearIcon = () => {
     return (
@@ -114,7 +109,7 @@ export const InputIcon = ({
       backgroundColor={background}
       border={border}
       borderRadius={borderRadius}
-      customHeight={customHeight}
+      customHeight={height}
       customWidth={width}
       justifyContent='center'
       padding={customPadding}
@@ -163,7 +158,7 @@ export const InputIcon = ({
         <Icon
           clickable='pointer'
           color={colorIcon}
-          customSize={customSizeInputIcon}
+          customSize={customSizeIcon}
           name={icon}
         />
       </Column>

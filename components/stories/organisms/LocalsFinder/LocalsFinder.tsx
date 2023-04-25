@@ -27,7 +27,6 @@ import {
   useLocalsFinder
 } from './LocalsFinder.helper'
 import styles from './LocalsFinder.module.css'
-import { Site } from '../../../shared/interfaces/Site'
 
 export interface LocalsFinderProps {
   children?: ReactNode;

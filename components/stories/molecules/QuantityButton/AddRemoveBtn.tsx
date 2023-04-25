@@ -13,7 +13,6 @@ interface AddOrRemoveProps {
   alternativeBackground?: string;
   circleStyle?: CircleStyleProps,
   disabled: boolean;
-  site: 'alvi' | 'unimarc';
   type: 'right' | 'left';
   handleShake: (props?: unknown) => void;
   handleQuantity: (props?: unknown) => void;
@@ -27,7 +26,6 @@ export const AddOrRemoveBtn = ({
   },
   alternativeBackground,
   disabled,
-  site = 'unimarc',
   type,
   handleShake,
   handleQuantity
@@ -38,7 +36,6 @@ export const AddOrRemoveBtn = ({
   return (
     <button
       aria-label={type}
-      className={styles[`quantityBtn--${site}`]}
       onClick={disabled ? handleShake : handleQuantity}
       style={{
         background: alternativeBackground,

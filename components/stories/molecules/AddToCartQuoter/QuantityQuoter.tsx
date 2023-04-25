@@ -22,7 +22,6 @@ export const QuantityQuoter = ({
     maxWidth: '100%',
     sizeCircle: 25
   },
-  site = 'alvi',
   value,
   handleAdd,
   handleChange,
@@ -75,7 +74,6 @@ export const QuantityQuoter = ({
         disabled={isLeftDisabled}
         handleQuantity={handleRemove}
         handleShake={addChake}
-        site={site}
         type='left'
       />
       {!isLoading ? (
@@ -117,7 +115,6 @@ export const QuantityQuoter = ({
         disabled={isRightDisabled}
         handleQuantity={handleAdd}
         handleShake={addChake}
-        site={site}
         type='right'
       />
     </Container>

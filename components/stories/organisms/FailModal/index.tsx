@@ -4,11 +4,10 @@ import { BigScreen, SmallScreen } from '../../../helpers/mediaQueries'
 import { getGlobalStyle } from '../../../helpers'
 import { TitleProps } from '../../atoms/Title/Title'
 import ContentModal from './helpers/ContentModal'
-import { Site } from '../../../shared/interfaces/Site'
 import { DataResponseCart } from '../ModalWithoutStock/ModalWithoutStock'
+import React from 'react'
 
 export interface FailModalProps {
-  alviSite?: boolean;
   arrFail?: DataResponseCart;
   backgroundColor?: string;
   boldButton?: string;
@@ -17,18 +16,17 @@ export interface FailModalProps {
   buttonWidth?: string;
   colorTitle?: string;
   content?: string;
+  containerPadding?:string;
   contentColor?: Color;
   contentPosition?: TitleProps['textAlign'];
   isOpen?: boolean;
   isOpenModalOutStock?: boolean;
   labelSecondary?: string;
   showButton?: boolean;
-  site?: Site;
   sizeTitle?: string;
   title?: string;
   titleColor?: string;
   titlePosition?: TitleProps['textAlign'];
-  unimarcSite?: boolean;
   action?: () => void;
   handleKeepAddress?: () => void;
   handleModal?: () => void;
@@ -46,7 +44,6 @@ export const FailModal = ({
   isOpen = true,
   labelSecondary = 'Conservar mi dirección',
   showButton,
-  site = 'unimarc',
   title,
   titlePosition,
   action,
@@ -54,20 +51,16 @@ export const FailModal = ({
   handleModal = () => { return },
   onClick
 }: FailModalProps): React.ReactElement => {
-  const unimarcSite = site === 'unimarc'
-  const alviSite = site === 'alvi'
-  const backgroundColor = getGlobalStyle(unimarcSite ? '--color-primary-red-header' : '--color-alvi-primary-blue-gradient')
-  const boldButton = getGlobalStyle(unimarcSite ? '--font-weight-bold' : '--font-weight-semibold')
-  const buttonWidth = unimarcSite ? '100%' : '280px'
-  const contentColor = unimarcSite ? 'black' : 'neutral-alvi'
-  const sizeTitle = getGlobalStyle(unimarcSite ? '--font-size-titles-xs' : '--font-size-titles-sm')
+  const backgroundColor = getGlobalStyle('--color-alvi-primary-blue-gradient')
+  const boldButton = getGlobalStyle('--font-weight-semibold')
+  const buttonWidth =  '280px'
+  const contentColor =  'black' 
+  const sizeTitle = getGlobalStyle('--font-size-titles-sm')
   const titleColor = colorTitle ? colorTitle : getGlobalStyle('--color-base-black')
   const widthContentModal = '328px'
-  const heightButton = showButton ? '346px' : '280px'
-  const minHeightModal: string = alviSite ? heightButton : 'initial'
+  const minHeightModal: string = 'initial'
 
   const contentModalProps = {
-    alviSite,
     backgroundColor,
     boldButton,
     buttonStatus,
@@ -80,12 +73,10 @@ export const FailModal = ({
     isOpen: true,
     labelSecondary,
     showButton,
-    site,
     sizeTitle,
     title,
     titleColor,
     titlePosition,
-    unimarcSite,
     widthContentModal,
     action,
     handleKeepAddress,
@@ -106,7 +97,6 @@ export const FailModal = ({
           isOpen={isOpen}
           maxWidth={widthContentModal}
           minHeight={minHeightModal}
-          site={site}
           toggle={() => { return }}
           toggleOutside={handleModal}
         >
@@ -121,8 +111,7 @@ export const FailModal = ({
           isOpen={isOpen}
           maxWidth={widthContentModal}
           minHeight={minHeightModal}
-          site={site}
-          toggle={null}
+          toggle={() => { return }}
           toggleOutside={handleModal}
         >
           <ContentModal {...contentModalPropsMobile} />

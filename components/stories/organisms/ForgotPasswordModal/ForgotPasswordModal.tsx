@@ -1,5 +1,4 @@
 import { BigScreen, SmallScreen } from '../../../helpers'
-import { Site } from '../../../shared/interfaces/Site'
 import { Modal } from '../../molecules'
 import styles from './ForgotPasswordModal.module.css'
 

@@ -24,7 +24,6 @@ export interface AddToCartProps {
   quantityButtonProps?: Omit<QuantityButtonProps, 'value'>;
   quantityButtonStyles?: QuantityButtonStylesProps;
   showQuantityButton?: boolean;
-  site?: 'unimarc' | 'alvi';
   statusButton?: ButtonStatus;
   tooltipProps?: TooltipProps;
   variant?: 'input' | 'button';
@@ -42,7 +41,6 @@ export const AddToCartAndQuantity = ({
   quantity,
   quantityButtonProps,
   quantityButtonStyles,
-  site = 'unimarc',
   statusButton,
   variant = 'input',
   handleOnClick

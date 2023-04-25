@@ -34,7 +34,6 @@ BigScreen.args = {
     handleChange: () => {return},
     handleRemove: () => {return}
   },
-  site:'alvi',
   handleOnClick: ({itemId}) => {return itemId}
 }
 
@@ -45,7 +44,6 @@ SmallScreen.args = {
   disabled: false,
   isLoading: false,
   quantity: 100,
-  site:'alvi',
   statusButton: 'initial',
   quantityButtonStyles: {
     fontSize: 'sm',
