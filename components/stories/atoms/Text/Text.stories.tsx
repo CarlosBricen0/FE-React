@@ -15,7 +15,6 @@ base.args = {
   type: 'p',
   textAlign: 'left',
   fontSize: 'base',
-  color: getGlobalStyle('--color-base-black'),
   fontWeight: getGlobalStyle('--font-weight-normal'),
   children: 'Hola Seba probando',
   truncate: 10

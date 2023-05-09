@@ -49,14 +49,12 @@ TextComponent.args = {
     <Row>
       <Column>
         <Text
-          color='white'
           fontSize='lg'
           isFlex={false}
           type='span'
         >
           Te faltan
           <Text
-            color='white'
             fontSize='lg'
             fontWeight='semibold'
             isFlex={false}

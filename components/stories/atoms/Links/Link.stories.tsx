@@ -22,7 +22,7 @@ underline.args = {
   fontSize: 'base',
   fontWeight,
   href: '#',
-  label: 'Unimarc',
+  label: 'NBA',
   newTarget: false,
   underline: 'always'
 }
@@ -67,10 +67,10 @@ export const href = Template.bind({})
 href.args = {
   clickable: true,
   color: getGlobalStyle('--color-primary-red'),
-  label: 'Unimarc',
+  label: 'NBA',
   newTarget: true,
   fontWeight,
   fontSize: 'base',
   underline: 'none',
-  href: 'https://www.unimarc.cl'
+  href: 'https://www.google.cl'
 }
