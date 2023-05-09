@@ -2,29 +2,6 @@ import React, { CSSProperties } from 'react'
 import classNames from 'classnames'
 import styles from './Text.module.css'
 
-export type Color =
-  'primary' |
-  'secondary' |
-  'gray' |
-  'inactive' |
-  'black' |
-  'white' |
-  'success' |
-  'error' |
-  'warning' |
-  'tabasco' |
-  'guardsman-red' |
-  'blue' |
-  'blue2' |
-  'neutral' |
-  'neutral-dark' |
-  'neutral-black' |
-  'gray-light' |
-  'secondary-blue' |
-  'primary-green' |
-  'primary-green-light' |
-  'grayNeutral';
-
 export type FontSize =
   'base' |
   '2xs' |
@@ -43,7 +20,6 @@ export type FontSize =
 export interface TextProps {
   children: React.ReactNode;
   clickable?: string;
-  color?: Color;
   customClassName?: string;
   customColor?: string;
   fontFamily?: string;
@@ -74,7 +50,6 @@ const truncateString = (children: React.ReactNode, trunk: number): string => {
 export const Text = ({
   children,
   clickable = 'auto',
-  color = 'black',
   customClassName,
   customColor,
   fontFamily,
@@ -104,7 +79,6 @@ export const Text = ({
         [styles[`text--${fontWeight}`]]: fontWeight,
         [styles['text--bold']]: fontWeight == 'bold' || type === 'b',
         [styles[`text--${fontSize}`]]: fontSize,
-        [styles[`text--${color}`]]: color,
         [styles[`text__cursor--${clickable}`]]: clickable,
         [styles[`text--${underline}`]]: underline,
         [styles[`text--line-clamp`]]: lineClamp
