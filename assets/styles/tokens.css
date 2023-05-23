@@ -70,21 +70,19 @@
   --color-background-secondary-light: #E4F7FC;
   --color-background-gray: #E5E5E5;
   --color-background-gray-light: #f5f5f5;
-  --color-background-gray-dark: #E4E3E6;
   --color-background-white: #FFFFFF;
   --color-background-pink: #ec938d;
   --color-background-sunkist-peach: #FFDC98;
   --color-background-gray-info: #F6FFFD;
   --color-background-eastern-blue-two: #0089a9e5;
-  --color-background-white-opacity: #ffffffcc;
   --color-background-green-light: #E8FCF8;
   --color-background-blue-light: #B6EFFC;
+  --color-background-white-opacity: #ffffffcc;
 
   --color-icons-primary: #D9291C;
   --color-icons-secondary: #00819F;
   --color-icons-gray: #666666;
   --color-icons-gray-light: #C4C4C4;
-  --color-icons-gray-dark: #7E7F83;
   --color-icons-black: #282828;
   --color-icons-white: #FFFFFF;
   --color-icons-success: #24ba00;
