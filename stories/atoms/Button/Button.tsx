@@ -27,7 +27,6 @@ export interface ButtonProps {
   maxWidth?: string;
   minWidth?: string;
   padding?: CSSProperties['padding'];
-  site?: Site;
   size?: Size;
   status?: ButtonStatus;
   underline?: typeof Text.arguments.underline;
@@ -44,16 +43,6 @@ interface LabelButtonProps {
   customClassName?:string;
   label: string;
   status: string;
-}
-
-const brandWhite = getGlobalStyle('--color-base-white')
-
-const typeColors = {
-  primary: brandWhite,
-  secondary: getGlobalStyle('--color-primary-red'),
-  'primary-ca': brandWhite,
-  'secondary-ca': getGlobalStyle('--color-secondary-blue'),
-  'sub-category': brandWhite
 }
 
 export const Button = ({

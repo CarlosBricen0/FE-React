@@ -1,7 +1,4 @@
 export * from './Acordeon/Acordeon'
-export * from './AddToCartAndQuantity/AddToCartAndQuantity'
-export * from './AddToCartAndQuantityTop/AddToCartAndQuantityTop'
-export * from './AddToCartQuoter/AddToCartQuoter'
 export * from './Autocomplete/Autocomplete'
 export * from './Breadcrumbs/Breadcrumbs'
 export * from './CartIcon/CartIcon'

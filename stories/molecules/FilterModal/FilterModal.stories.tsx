@@ -1,6 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { FilterModal } from './FilterModal'
+import { getGlobalStyle } from '../../../helpers/getGlobalStyle'
 
 export default {
   title: 'Molecules/FilterModal',
@@ -14,5 +15,6 @@ const Template: ComponentStory<typeof FilterModal> = (args) => {
 export const FilterModalTemplate = Template.bind({})
 FilterModalTemplate.args = {
   title: 'Ordenar por',
-  buttonName: 'Aplicar orden'
+  buttonName: 'Aplicar orden',
+  color:getGlobalStyle('--color-primary-red')
 }

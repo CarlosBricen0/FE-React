@@ -17,6 +17,7 @@ import styles from './FilterModal.module.css'
 export interface FilterModalProps {
   title: string;
   buttonName: string;
+  colorButton:string;
   children?: React.ReactNode;
   onApplyFilter?: () => void;
   onCloseModal?: () => void;
@@ -25,6 +26,7 @@ export interface FilterModalProps {
 export const FilterModal = ({
   title = '',
   buttonName = '',
+  colorButton,
   children,
   onApplyFilter,
   onCloseModal
@@ -77,6 +79,7 @@ export const FilterModal = ({
           <div className={styles.button}>
             <Button
               borderRadius='24px'
+              color={colorButton}
               height='45px'
               label={buttonName}
               onClick={onApplyFilter}
