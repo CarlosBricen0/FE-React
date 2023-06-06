@@ -1,6 +1,6 @@
 {
-  "name": "fe-components",
-  "version": "1.0.0",
+  "name": "components-front-end",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
