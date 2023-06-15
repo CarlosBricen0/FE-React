@@ -25,7 +25,7 @@ export type Color =
   'primary-green-light' |
   'grayNeutral';
 
-export type FontSize =
+export type FontSize = 
   'base' |
   '2xs' |
   'xs' |
@@ -71,7 +71,7 @@ const truncateString = (children: React.ReactNode, trunk: number): string => {
   return children.toString().substring(0, trunk) + dot
 }
 
-export const Text = ({
+export const Text:React.FC<TextProps> = ({
   children,
   clickable = 'auto',
   color = 'black',
@@ -93,7 +93,7 @@ export const Text = ({
   type = 'p',
   underline = 'none',
   onClick,
-  ...props
+  ...argTypes
 }: TextProps): React.ReactElement => {
   return React.createElement(
     type,
@@ -121,7 +121,7 @@ export const Text = ({
         WebkitLineClamp: lineClamp
       },
       htmlFor,
-      ...props
+      ...argTypes
     },
     typeof truncate === 'number' ? truncateString(children, truncate) : children
   )
