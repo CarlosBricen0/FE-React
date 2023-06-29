@@ -1,22 +1,27 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryFn, Meta  } from '@storybook/react'
 import { Button } from './Button'
 import { getGlobalStyle } from '../../../helpers'
 
 export default {
   title: 'Atoms/Button',
   component: Button
-} as ComponentMeta<typeof Button>
+} as Meta <typeof Button>
 
-const Template: ComponentStory<typeof Button> = (args) => {return <Button {...args} />}
+const Template: StoryFn<typeof Button> = (args) => {return <Button {...args} />}
 
 export const Primary = Template.bind({})
-Primary.args = {
-  label: 'Button text',
-  size: 'medium',
+Primary.argTypes = {
+  label:{
+    control:'text'
+  },
+  size: {
+    control:'select',
+    options:['xs' , 'small' , 'medium' , 'large' , 'sm' , 'md' , 'lg' , 'xl']
+  },
   status: 'initial'
 }
-
+/* 
 export const Plain = Template.bind({})
 Plain.args = {
   label: 'Plain',
@@ -41,4 +46,4 @@ ButtonIcon.args = {
   minWidth: '137px',
   size: 'medium',
   status: 'initial'
-}
+} */

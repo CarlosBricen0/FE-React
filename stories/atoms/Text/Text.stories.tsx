@@ -28,7 +28,7 @@ base.argTypes = {
   } ,
   children: {
      control : 'text' ,
-     defeaultValue:'asdasd'
+     defaultValue:'asdasd'
     },
   truncate: {
     control:{
