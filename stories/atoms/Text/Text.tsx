@@ -1,44 +1,44 @@
-import React, { CSSProperties } from 'react'
-import classNames from 'classnames'
-import styles from './Text.module.css'
+import React, { CSSProperties } from "react";
+import classNames from "classnames";
+import styles from "./Text.module.css";
 
 export type Color =
-  'primary' |
-  'secondary' |
-  'gray' |
-  'inactive' |
-  'black' |
-  'white' |
-  'success' |
-  'error' |
-  'warning' |
-  'tabasco' |
-  'guardsman-red' |
-  'blue' |
-  'blue2' |
-  'neutral' |
-  'neutral-dark' |
-  'neutral-black' |
-  'gray-light' |
-  'secondary-blue' |
-  'primary-green' |
-  'primary-green-light' |
-  'grayNeutral';
+  | "primary"
+  | "secondary"
+  | "gray"
+  | "inactive"
+  | "black"
+  | "white"
+  | "success"
+  | "error"
+  | "warning"
+  | "tabasco"
+  | "guardsman-red"
+  | "blue"
+  | "blue2"
+  | "neutral"
+  | "neutral-dark"
+  | "neutral-black"
+  | "gray-light"
+  | "secondary-blue"
+  | "primary-green"
+  | "primary-green-light"
+  | "grayNeutral";
 
-export type FontSize = 
-  'base' |
-  '2xs' |
-  'xs' |
-  'sm' |
-  'md' |
-  'lg' |
-  'xl' |
-  '2xl' |
-  '3xl' |
-  '5xl' |
-  '6xl' |
-  '9xl' |
-  '10xl';
+export type FontSize =
+  | "base"
+  | "2xs"
+  | "xs"
+  | "sm"
+  | "md"
+  | "lg"
+  | "xl"
+  | "2xl"
+  | "3xl"
+  | "5xl"
+  | "6xl"
+  | "9xl"
+  | "10xl";
 
 export interface TextProps {
   children: React.ReactNode;
@@ -48,50 +48,52 @@ export interface TextProps {
   customColor?: string;
   fontFamily?: string;
   fontSize?: FontSize;
-  fontWeight?: 'regular' | 'semibold' | 'medium' | 'bold';
+  fontWeight?: "regular" | "semibold" | "medium" | "bold";
+  height: string;
   htmlFor?: string;
   isFlex?: boolean;
-  letterSpacing?: CSSProperties['letterSpacing'];
+  letterSpacing?: CSSProperties["letterSpacing"];
   lineClamp?: number;
   lineHeight?: string;
-  textAlign?: 'left' | 'center' | 'right' | 'justify';
-  textDecorationLine?: CSSProperties['textDecorationLine'];
-  textOverflow?: CSSProperties['textOverflow']
-  textTransform?: CSSProperties['textTransform'];
+  textAlign?: "left" | "center" | "right" | "justify";
+  textDecorationLine?: CSSProperties["textDecorationLine"];
+  textOverflow?: CSSProperties["textOverflow"];
+  textTransform?: CSSProperties["textTransform"];
   truncate?: 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 | number;
-  type?: 'p' | 'span' | 'div' | 'label' | 'b';
-  underline?: 'none' | 'hover' | 'always' | 'line-through';
+  type?: "p" | "span" | "div" | "label" | "b";
+  underline?: "none" | "hover" | "always" | "line-through";
   onClick?: () => void;
 }
 
 const truncateString = (children: React.ReactNode, trunk: number): string => {
-  if (!children) return ''
-  const count = children.toString().length
-  const dot = count > trunk ? '...' : ''
-  return children.toString().substring(0, trunk) + dot
-}
+  if (!children) return "";
+  const count = children.toString().length;
+  const dot = count > trunk ? "..." : "";
+  return children.toString().substring(0, trunk) + dot;
+};
 
-export const Text:React.FC<TextProps> = ({
+export const Text: React.FC<TextProps> = ({
   children,
-  clickable = 'auto',
-  color = 'black',
+  clickable = "auto",
+  color = "black",
   customClassName,
   customColor,
   fontFamily,
-  fontSize = 'base',
-  fontWeight = 'regular',
+  fontSize = "base",
+  fontWeight = "regular",
+  height,
   htmlFor,
   isFlex = true,
   letterSpacing,
   lineClamp,
   lineHeight,
-  textAlign = 'left',
+  textAlign = "left",
   textDecorationLine,
   textOverflow,
   textTransform,
   truncate,
-  type = 'p',
-  underline = 'none',
+  type = "p",
+  underline = "none",
   onClick,
   ...argTypes
 }: TextProps): React.ReactElement => {
@@ -102,29 +104,30 @@ export const Text:React.FC<TextProps> = ({
         [styles[`text--${textAlign}`]]: textAlign,
         [styles[`text--flex`]]: isFlex,
         [styles[`text--${fontWeight}`]]: fontWeight,
-        [styles['text--bold']]: fontWeight == 'bold' || type === 'b',
+        [styles["text--bold"]]: fontWeight == "bold" || type === "b",
         [styles[`text--${fontSize}`]]: fontSize,
         [styles[`text--${color}`]]: color,
         [styles[`text__cursor--${clickable}`]]: clickable,
         [styles[`text--${underline}`]]: underline,
-        [styles[`text--line-clamp`]]: lineClamp
+        [styles[`text--line-clamp`]]: lineClamp,
       }),
       onClick,
       style: {
         color: customColor,
         fontFamily,
+        height,
         letterSpacing,
         lineHeight,
         textDecorationLine,
         textOverflow,
         textTransform,
-        WebkitLineClamp: lineClamp
+        WebkitLineClamp: lineClamp,
       },
       htmlFor,
-      ...argTypes
+      ...argTypes,
     },
-    typeof truncate === 'number' ? truncateString(children, truncate) : children
-  )
-}
+    typeof truncate === "number" ? truncateString(children, truncate) : children
+  );
+};
 
-export default Text
+export default Text;
