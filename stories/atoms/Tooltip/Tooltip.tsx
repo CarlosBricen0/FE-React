@@ -38,6 +38,7 @@ export interface TooltipProps {
   colorTitle?: ColorTitle;
   containerProps?: ChildrenBaseContainerProps;
   customClassName?: string;
+  display?:string;
   height?: string;
   left?: string;
   margin?: string;
@@ -76,6 +77,7 @@ export const Tooltip = ({
   colorText,
   colorTitle,
   containerProps,
+  display,
   customClassName,
   height,
   left,
@@ -112,10 +114,12 @@ export const Tooltip = ({
         className={classNames(styles.container, customClassName)}
         onClick={onClick}
         style={{
+          alignItems:alignAllItems,
           background,
           borderRadius,
           bottom,
           boxShadow,
+          display,
           height,
           left,
           margin,

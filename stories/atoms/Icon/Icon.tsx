@@ -3,6 +3,8 @@ import { Icons } from '../../../assets/SvgComponents/SvgIcons'
 import { getGlobalStyle } from '../../../helpers'
 
 export type SizeIcon = 'xs' | '2xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+
+export type IconNames = keyof typeof Icons
 export interface IconProps {
   clickable?: string;
   color?: string;

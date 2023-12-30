@@ -13,12 +13,17 @@
   --color-primary-red-qty-button: linear-gradient(180deg, #DA291C 0%, #C00000 44.44%);
   --color-primary-red-list-button: linear-gradient(87.13deg, #DA291C 0%, #C00000 100%);
   --color-primary-red-bg: #FFF4F4;
+  --color-primary-red-bg-hover: #FFE4E3;
   --color-primary-disabled: #c4c4c4;
   --color-primary-pink-light: #FFC2C2;
   --color-primary-red-darker: #5C0F0A;
   --color-primary-orange-light: #FFA841;
   --color-primary-green: #27B190;
   --color-primary-green-light: #29D3AB;
+  --color-primary-gray-btn: #686159;
+  --color-primary-gray-dark-btn: #514B41;
+  --color-primary-light-red: #FF5A5F;
+  --color-primary-light-carmine-pink: #E37077;
 
   --color-secondary-blue: #00819F;
   --color-secondary-blue2: #006C85;
@@ -34,9 +39,14 @@
   --color-neutral-gray-light: #F5F5F5;
   --color-neutral-gray-silver: #C4C4C4;
   --color-neutral-gray-white: #F9F9F9;
+  --color-neutral-gray-hover: #E9E9E9;
+  --color-neutral-gray-divider: #DEDEDE;
   --color-neutral-anti-flash: #F1F1F1;
   --color-neutral-white: #FFFFFF;
   --color-neutral-black-olive: #3B3B3B;
+  --color-neutral-gray-input: #AAAAAA;
+  --color-neutral-solid: #D2D2D2;
+  --color-neutral-gray-bg-hover: #AAAAAA;
 
   --color-campaigns-red: #da291c;
   --color-campaigns-black: #212322;
@@ -45,13 +55,20 @@
   --color-campaigns-yellow: #FEDD00;
   --color-campaigns-turquoise: #63BBAE;
 
-  --color-feedback-success-light: #24ba00;
-  --color-feedback-success-dark: #1B8900;
-  --color-feedback-error-light: #F80000;
+  --color-feedback-error: #E43C3C;
   --color-feedback-error-dark: #EE0000;
+  --color-feedback-error-light: #F80000;
+  --color-feedback-success-dark: #1B8900;
+  --color-feedback-success-light: #24ba00;
+  --color-feedback-success-new: #49A931;
+  --color-feedback-success-bg: #DCF9E7;
+  --color-feedback-error-bg: #FFE4E3;
   --color-feedback-warning-light: #F0A92E;
   --color-feedback-warning-dark: #CC870F;
   --color-feedback-warning-gray: #C7C7CC;
+  --color-feedback-warning-bg: #FFF3D6;
+  --color-feedback-info: #1FA5C2;
+  --color-feedback-info-bg: #BEF0FB;
 
   --color-text-primary: #da291c;
   --color-text-secondary: #00819f;
@@ -63,21 +80,45 @@
   --color-text-error: #EE0000;
   --color-text-warning: #CC870F;
   --color-text-info-light: #27B190;
+  --color-text-wine: #5C0F0A;
+  --color-text-white-gray: #666666;
+  --color-text-scorpion: #5C5C5C;
+  --color-text-japonica: #DA7753;
+  --color-text-success-light: #2D8F04;
+  --color-text-dark-orange: #FF9000;
+  --color-text-silver-chalice: #AAAAAA;
+  --color-text-banco-estado: #C0580D;
+  --color-text-unipay: #379F90;
 
   --color-background-primary: #da291c;
   --color-background-primary-light: #FFF4F4;
+  --color-background-primary-dark: #C00000;
   --color-background-secondary: #00819F;
   --color-background-secondary-light: #E4F7FC;
   --color-background-gray: #E5E5E5;
   --color-background-gray-light: #f5f5f5;
   --color-background-white: #FFFFFF;
   --color-background-pink: #ec938d;
+  --color-background-wewak: #F6B1B3;
+  --color-background-crimson: #E34E53;
   --color-background-sunkist-peach: #FFDC98;
   --color-background-gray-info: #F6FFFD;
   --color-background-eastern-blue-two: #0089a9e5;
   --color-background-green-light: #E8FCF8;
   --color-background-blue-light: #B6EFFC;
   --color-background-white-opacity: #ffffffcc;
+  --color-background-gray-dark: #E4E3E6;
+  --color-background-pale-rose: #FFF4F4;
+  --color-background-dark-orange: #FF9000;
+  --color-background-razzmatazz: #E81D75;
+  --color-background-pale-orange: #FFF1ED;
+  --color-background-banco-estado: #FFE1AE;
+  --color-background-unipay: #D4F3EF;
+  --color-background-citrus: #85CA00;
+  --color-background-christi: #6da300;
+  --color-background-tenne: #ca600a;
+  --color-background-jade: #00AB74;
+  --color-background-mountain-meadow: #19C89033;
 
   --color-icons-primary: #D9291C;
   --color-icons-secondary: #00819F;
@@ -88,6 +129,7 @@
   --color-icons-success: #24ba00;
   --color-icons-error: #F80000;
   --color-icons-warning: #F0A92E;
+  --color-icons-gray-dark: #7E7F83;
 
   --color-alvi-base-black: #282828;
   --color-alvi-base-white: #FFFFFF;
@@ -105,11 +147,16 @@
   --color-alvi-primary-blue-header-gradient: linear-gradient(87.13deg, #02498E 0%, #00285C 100%);
   --color-alvi-primary-blue-gradient2: linear-gradient(180deg, #013870 0%, #001a3b 96.15%);
   --color-alvi-primary-yellow-gradient-button: linear-gradient(180deg, #FFE59C 0%, #EEC656 100%);
+  --color-alvi-primary-tropical-blue: #C2DAFF;
+  --color-alvi-primary-aqua-marine: #42E8B4;
+  --color-alvi-primary-magic-mint: #A4F4DB;
+  --color-alvi-primary-solid: #001B3D;
 
   --color-alvi-secondary-yellow: #FDC42D;
   --color-alvi-secondary-yellow2: #F6B812;
   --color-alvi-secondary-yellow3: #E1AE27;
   --color-alvi-secondary-yellow4: #FFE59C;
+  --color-alvi-secondary-green: #19C890;
 
   --color-alvi-neutral-black: #333333;
   --color-alvi-neutral-gray-dark: #666666;
@@ -135,6 +182,7 @@
   --color-alvi-text-success: #1B8900;
   --color-alvi-text-error: #E43C3C;
   --color-alvi-text-warning: #CC870F;
+  --color-alvi-text-medium-electric-blue: #06479D;
 
   --color-alvi-background-selago: #DEEAFA;
   --color-alvi-background-foam: #E4F7FC;
@@ -165,8 +213,10 @@
 
   --font-family-sans: Open Sans;
   --font-family-montserrat: Montserrat;
+  --font-family-plus-jakarta: Plus Jakarta Sans;
 
   --font-size-base: 16px;
+  --font-size-8px: 0.5rem;
   --font-size-2xs: 0.625rem;
   --font-size-xs: 0.688rem;
   --font-size-sm: 0.75rem;
@@ -179,6 +229,8 @@
   --font-size-6xl: 3rem;
   --font-size-9xl: 5.862rem;
   --font-size-10xl: 12.5rem;
+  --font-size-11xl: 2.25rem;
+  --font-size-12xl: 3.625rem;
 
   --spacing-none: 0;
   --spacing-xs: 0.125rem;
@@ -227,6 +279,8 @@
   --line-height-6xl: 4.086rem;
   --line-height-9xl: 8rem;
   --line-height-10xl: 17.05rem;
+  --line-height-11xl: 2.813rem;
+  --line-height-12xl: 3.75rem;
 
   --letter-spacing-tightest: -.075rem;
   --letter-spacing-tighter: -.05rem;
@@ -243,8 +297,11 @@
   --box-shadow-sm: 4px 4px 18px rgba(0, 0, 0, 0.12);
   --box-shadow-md: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
   --box-shadow-2md: 0px 0px 25px rgba(49, 97, 99, 0.24);
+  --box-shadow-3md: 0px 6px 10px rgba(27, 33, 56, 0.15);
   --box-shadow-lg: -1px 7px 18px -2px rgba(0, 0, 0, 0.12);
+  --box-shadow-2lg: 2px 10px 14px 0px rgba(27, 33, 56, 0.12);
   --box-shadow-xl: 20px 20px 80px rgba(27, 33, 56, 0.05);
+  --box-shadow-around: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
 
   --filter-none: none;
   --filter-xs: drop-shadow(20px 20px 80px #1b21380d);
@@ -260,6 +317,8 @@
   --border-radius-full: 624.938rem;
 
   --border-width-none: 0;
+  --border-width-3xs: 0.019rem;
+  --border-width-2xs: 0.031rem;
   --border-width-xs: 0.063rem;
   --border-width-md: 0.094rem;
   --border-width-lg: 0.125rem;
