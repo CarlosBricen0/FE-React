@@ -1,19 +1,13 @@
-import { cssModules } from "../webpack/cssModules";
-import { loadConfigs } from "../webpack/loadConfigs";
-
+const path = require('path');
 module.exports = {
-  core: {
-    builder: 'webpack5',
-  },
-  stories: [
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(ts|tsx|js|jsx)"
-  ],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-actions"
-  ],
+  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-a11y'],
+  framework: { name: '@storybook/react-webpack5', options: {} },
   typescript: { reactDocgen: false },
-  webpackFinal: loadConfigs([cssModules])
-}
+  webpackFinal: async (config) => {
+    config.resolve.alias = { ...config.resolve.alias, react: path.resolve(__dirname, '../node_modules/react'), 'react-dom': path.resolve(__dirname, '../node_modules/react-dom') };
+    for (const rule of config.module.rules) { if (rule.test && rule.test.toString() === /\.css$/.toString()) rule.exclude = /\.module\.css$/; }
+    config.module.rules.push({ test: /\.module\.css$/, use: ['style-loader', {loader:'css-loader', options: {modules:true}}] });
+    return config;
+  }
+};

@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react'
+import { MouseEventHandler, CSSProperties } from 'react'
 
 export * as Icons from './MapIndex'
 
@@ -9,7 +9,7 @@ export interface SvgComponentProps {
   site?: 'unimarc' | 'alvi';
   sizemap: number;
   strokeWidth?: string;
-  style?: unknown;
+  style?: CSSProperties;
   viewBox?: string;
   onClick?: () => void;
   onMouseOver?: MouseEventHandler;

@@ -1,15 +1,15 @@
 import classNames from 'classnames'
 import React, { createElement, CSSProperties } from 'react'
 import { Icons } from '../../../assets/SvgComponents/SvgIcons'
-import { getGlobalStyle } from '../../../helpers'
 import styles from './Button.module.css'
 import { Icon } from '../Icon/Icon'
-import { Text } from '../'
+import type { TextProps } from '../Text/Text'
 
 export type ButtonStatus = 'initial' | 'loading' | 'disabled' | 'disabled-red';
 export type Size = 'xs' | 'small' | 'medium' | 'large' | 'sm' | 'md' | 'lg' | 'xl';
 
-export interface ButtonProps {
+export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "color" | "onClick" | "onMouseEnter" | "onMouseLeave"> {
+  unstyled?: boolean;
   actionType?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];
   background?: string;
   border?: CSSProperties['border'];
@@ -22,19 +22,19 @@ export interface ButtonProps {
   fullWidth?: true | false;
   height?: string;
   id?: string;
-  label: string;
+  label?: string;
   margin?: string;
   maxWidth?: string;
   minWidth?: string;
   padding?: CSSProperties['padding'];
   size?: Size;
   status?: ButtonStatus;
-  underline?: typeof Text.arguments.underline;
+  underline?: TextProps['underline'];
   width?: string;
   iconName?: keyof (typeof Icons);
-  onClick?: () => void;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onMouseEnter?: React.MouseEventHandler<HTMLButtonElement>;
+  onMouseLeave?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 interface LabelButtonProps {
@@ -46,6 +46,7 @@ interface LabelButtonProps {
 }
 
 export const Button = ({
+  unstyled = false,
   actionType,
   background,
   border,
@@ -60,6 +61,10 @@ export const Button = ({
   iconName,
   id,
   label,
+  children,
+  className,
+  disabled,
+  type,
   margin,
   maxWidth,
   minWidth = '200px',
@@ -70,28 +75,30 @@ export const Button = ({
   width = 'auto',
   onClick,
   onMouseEnter,
-  onMouseLeave
+  onMouseLeave,
+  ...nativeProps
 }: ButtonProps): React.ReactElement<ButtonProps> => {
 
   
 
   return (
     <button
-      aria-label={label}
-      className={classNames(styles.button, customClassName, {
+      {...nativeProps}
+      aria-label={nativeProps['aria-label'] || label}
+      className={classNames(!unstyled && styles.button, customClassName, className, !unstyled && {
         [styles[`button--${size}`]]: size,
         [styles[`button--${status}`]]: status,
         [styles[`button--${underline}`]]: underline,
         [styles[`button--fullwidth`]]: fullWidth,
         [styles[`button--icon`]]: iconName && status !== 'loading'
       })}
-      disabled={status === 'disabled' || status === 'disabled-red' || status === 'loading'}
+      disabled={disabled || status === 'disabled' || status === 'disabled-red' || status === 'loading'}
       id={id}
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       ref={buttonRef}
-      style={{
+      style={unstyled ? nativeProps.style : {
         background,
         border,
         borderRadius,
@@ -105,15 +112,15 @@ export const Button = ({
         padding,
         width
       }}
-      type={actionType}
+      type={actionType || type || "button"}
     >
-      <GetLabelButton
+      {children && status !== "loading" ? children : <GetLabelButton
         color={color}
         customClassName={styles.icon}
         iconName={iconName}
-        label={label}
+        label={label || ""}
         status={status}
-      />
+      />}
     </button>
   )
 }

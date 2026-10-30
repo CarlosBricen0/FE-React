@@ -1,0 +1,22 @@
+import React, { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '../../creator/ui/button';
+import { Input } from '../../creator/ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '../../creator/ui/card';
+import { Badge } from '../../creator/ui/badge';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger, DialogDescription } from '../../creator/ui/dialog';
+const meta: Meta = { title: 'Creator platform/Shared components', parameters: { layout: 'centered' } };
+export default meta;
+type Story = StoryObj;
+export const Membership: Story = { render: () => <Card className="w-80"><CardHeader><Badge>Premium</Badge><CardTitle>OnlyHorse membership</CardTitle></CardHeader><CardContent><p className="mb-4">Exclusive posts, videos and community.</p><Button>Subscribe · $59/month</Button></CardContent></Card> };
+export const ButtonStates: Story = { render: () => <div className="flex flex-wrap gap-4"><Button>Subscribe</Button><Button variant="outline">Manage membership</Button><Button disabled>Processing…</Button><Button variant="destructive">Delete post</Button><Button asChild><a href="#preview">View product</a></Button></div> };
+function ProfilePreview() { const [name, setName] = useState('Horse lover'); return <div className="space-y-4"><label htmlFor="creator-name">Display name</label><Input id="creator-name" value={name} onChange={event => setName(event.target.value)} /><p>{name}</p></div> }
+export const ProfileField: Story = { render: () => <ProfilePreview /> };
+export const LockedContent: Story = { render: () => <Card className="w-80"><CardHeader><CardTitle>Exclusive training session</CardTitle></CardHeader><CardContent><p className="mb-4">Subscribe to unlock this post.</p><Button>Unlock with Premium</Button></CardContent></Card> };
+export const AccessibleDialog: Story = { render: () => <Dialog><DialogTrigger asChild><Button>View comments</Button></DialogTrigger><DialogContent><DialogTitle>Comments</DialogTitle><DialogDescription>Share your thoughts with the community.</DialogDescription><Input aria-label="Comment" placeholder="Write a comment" /><Button>Comment</Button></DialogContent></Dialog> };
+import { CreatorPostCard } from '../../creator/components/CreatorPostCard';
+import { ProductTile } from '../../creator/components/ProductTile';
+import { MetricCard } from '../../creator/components/MetricCard';
+export const FeedPost: Story = { render: () => <div className="w-96"><CreatorPostCard creator={{ name: 'OnlyHorse', image: null }} date="Oct 29, 2026" text="A new training session from the farm." locked membershipAction={<Button>Subscribe to unlock</Button>} actions={<Button variant="ghost">♡ 12 likes</Button>} /></div> };
+export const Merchandise: Story = { render: () => <div className="w-80"><ProductTile name="OnlyHorse Classic" price="$29.99" image={<div className="h-40 bg-muted rounded flex items-center justify-center">Product image</div>} action={<Button className="w-full">Choose size</Button>} /></div> };
+export const Analytics: Story = { render: () => <div className="grid grid-cols-3 gap-4"><MetricCard title="Revenue" value="$590.00" /><MetricCard title="Sales" value={10} /><MetricCard title="Active members" value={8} /></div> };

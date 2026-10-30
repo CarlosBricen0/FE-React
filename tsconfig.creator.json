@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "types": ["node", "react"]
+  },
+  "include": ["creator/**/*.ts", "creator/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
