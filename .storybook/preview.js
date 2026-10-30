@@ -1,4 +1,5 @@
 import '../assets/styles/globals.css'
+import '../creator/styles.css'
 import '../assets/styles/tokens.css'
 
 export const parameters = {

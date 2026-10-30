@@ -1,6 +1,6 @@
 import React, { createElement } from 'react'
 import { Icons } from '../../../assets/SvgComponents/SvgIcons'
-import { getGlobalStyle } from '../../../helpers'
+import { getGlobalStyle } from '../../../helpers/getGlobalStyle'
 
 export type SizeIcon = 'xs' | '2xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 export interface IconProps {

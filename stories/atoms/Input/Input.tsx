@@ -2,12 +2,13 @@ import React from 'react'
 import classNames from 'classnames'
 
 import styles from './Input.module.css'
-import { getGlobalStyle } from '../../../helpers'
+import { getGlobalStyle } from '../../../helpers/getGlobalStyle'
 
 type FontSize = 'base' | 'xs' | 'sm' | 'md' | 'lg'
 type TextAlign = 'left' | 'center' | 'right' | 'justify'
 
-export interface InputProps extends Omit<React.HTMLProps<HTMLInputElement>, 'ref'> {
+export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'ref'> {
+  unstyled?: boolean;
   adornmentStyle?: object;
   adornmentText?: string;
   autoFocus?: boolean;
@@ -16,11 +17,11 @@ export interface InputProps extends Omit<React.HTMLProps<HTMLInputElement>, 'ref
   borderRadius?: string;
   color?: string;
   customClassName?: string;
-  defaultValue?: string;
+  defaultValue?: string | number | readonly string[];
   disabled?: boolean;
   fontSize?: FontSize;
   fontWeight?: 'regular' | 'semibold' | 'medium' | 'bold'
-  height?: string;
+  height?: string | number;
   id?: string;
   inputMode?: 'none' | 'search' | 'text' | 'numeric' | 'tel' | 'url' | 'email' | 'decimal';
   margin?: string;
@@ -31,14 +32,15 @@ export interface InputProps extends Omit<React.HTMLProps<HTMLInputElement>, 'ref
   textAlign?: TextAlign;
   title?: string;
   type?: string;
-  width?: string;
-  onBlur?: (e?: React.ChangeEvent<HTMLInputElement>) => void;
-  onChange?: (e?: React.ChangeEvent<HTMLInputElement>) => void;
-  onFocus?: (e?: React.ChangeEvent<HTMLInputElement>) => void;
-  onKeyPress?: (e?: React.KeyboardEvent<HTMLInputElement>) => void;
+  width?: string | number;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
+  onKeyPress?: React.KeyboardEventHandler<HTMLInputElement>;
 }
 
 export const Input = React.forwardRef(function Input({
+  unstyled = false,
   adornmentStyle,
   adornmentText,
   autoFocus = false,
@@ -72,8 +74,8 @@ export const Input = React.forwardRef(function Input({
       <input
         autoFocus={autoFocus}
         className={classNames(
-          styles.input,
-          [styles[`font--weight--${fontWeight}`]], {
+          !unstyled && styles.input,
+          !unstyled && [styles[`font--weight--${fontWeight}`]], !unstyled && {
             [styles[`font--size--${fontSize}`]]: fontSize,
             [styles[`input--${placeholderFocus}`]]: placeholderFocus,
             [styles[`border--quantityButton`]]: border === 'quantityButton',
@@ -87,7 +89,7 @@ export const Input = React.forwardRef(function Input({
         inputMode={inputMode}
         onKeyPress={onKeyPress}
         ref={ref}
-        style={{
+        style={unstyled ? props.style : {
           background,
           borderRadius,
           height,
